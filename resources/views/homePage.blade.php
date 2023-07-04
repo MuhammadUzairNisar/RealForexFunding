@@ -14,7 +14,7 @@
   }
     
   </style>
-<div class="row" style="margin-top: 10px;padding: 25px 25px 25px 100px;">
+<div class="row" style="margin-top: 10px;padding: 25px 25px 0px 100px;">
   <div class="col-md-6">
     <!-- Left side with text -->
     <div>
@@ -56,7 +56,7 @@
 </div>
 
 <!-- TradingView Widget BEGIN -->
-<!-- <div class="tradingview-widget-container">
+<div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
   {
@@ -89,7 +89,7 @@
   "locale": "en"
 }
   </script>
-</div> -->
+</div>
 <!-- TradingView Widget END -->
 
 <div style="padding: 25px 25px 25px 25px;">
