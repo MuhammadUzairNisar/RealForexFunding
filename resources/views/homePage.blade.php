@@ -12,8 +12,336 @@
     width: 160px;
     margin-left: 10px;
   }
-    
+
+ 
+.card1{
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
+}
+.card1:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.col-sm-4:nth-child(1) .card1 ,
+.col-sm-4:nth-child(1) .card1 .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+ 
+}
+.col-sm-4:nth-child(2) .card1,
+.col-sm-4:nth-child(2) .card1 .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+ 
+}
+.col-sm-4:nth-child(3) .card1,
+.col-sm-4:nth-child(3) .card1 .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+ 
+}
+.card1::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+-webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+}
+.title .fa{
+  color:#fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius:  50%;
+  text-align: center;
+  line-height: 100px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+ 
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+ z-index: 2;
+}
+.price,.option{
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #fff;
+font-size: 60px;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+ 
+}
+.option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+.card1 a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+ 
+}
+.card1 a:hover{
+    text-decoration: none;
+}
+
+.card2{
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
+}
+.card2:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.col-sm-4:nth-child(1) .card1 ,
+.col-sm-4:nth-child(1) .card1 .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+ 
+}
+.col-sm-4:nth-child(2) .card1,
+.col-sm-4:nth-child(2) .card1 .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+ 
+}
+.col-sm-4:nth-child(3) .card1,
+.col-sm-4:nth-child(3) .card1 .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+ 
+}
+.card2::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+-webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+}
+.title .fa{
+  color:#fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius:  50%;
+  text-align: center;
+  line-height: 100px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+ 
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+ z-index: 2;
+}
+.price,.option{
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #fff;
+font-size: 60px;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+ 
+}
+.option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+.card2 a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+ 
+}
+.card2 a:hover{
+    text-decoration: none;
+}
+
+
+.card3{
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
+}
+.card3:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.col-sm-4:nth-child(1) .card3 ,
+.col-sm-4:nth-child(1) .card1 .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+ 
+}
+.col-sm-4:nth-child(2) .card3,
+.col-sm-4:nth-child(2) .card3 .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+ 
+}
+.col-sm-4:nth-child(3) .card3,
+.col-sm-4:nth-child(3) .card3 .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+ 
+}
+.card3::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+-webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+}
+.title .fa{
+  color:#fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius:  50%;
+  text-align: center;
+  line-height: 100px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+ 
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+ z-index: 2;
+}
+.price,.option{
+  position: relative;
+  z-index: 2;
+}
+.price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #fff;
+font-size: 60px;
+}
+.option ul {
+  margin: 0;
+  padding: 0;
+ 
+}
+.option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+.card3 a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+ 
+}
+.card3 a:hover{
+    text-decoration: none;
+}
+
   </style>
+
+
 <div class="row" style="margin-top: 10px;padding: 25px 25px 0px 100px;">
   <div class="col-md-6">
     <!-- Left side with text -->
@@ -95,7 +423,7 @@
 </div>
 <!-- TradingView Widget END -->
 
-<div style="padding: 40px 25px 25px 25px;">
+<div style="padding: 40px 25px 25px 40px;">
   <div class="card" style="margin-top: 50px; border-radius: 50px;">
   <center>
     <div class="card-body">
@@ -114,95 +442,86 @@
 </button>
 <br>
 <br>
+<div style="padding: 40px 25px 25px 25px;">
 
-<div class="container">
-<div class="row">
-<span class="border border-warning"></span>
-<div class="card" style="width: 17rem;">
-<span class="border border-warning"></span>
-  <div class="card-body">
-    <h5 class="card-title text-warning">Lite</h5>
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <h2>$99</h2>
-    <button type="button" class="btn btn-outline-warning">BUY NOW</button>
-    <p class="card-text">One-Time Payment Only</p>
-    <b>Profit Target</b>
-    <p class="card-text">$1,000 (10%)</p>
-    <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
-    <b>Minimum Trading Days</b>
-    <p class="card-text">3 Days</p>
-  </div>
-  <span class="border border-warning"></span>
-  </div>
-  
-   
-  <span class="border border-primary"></span>
-    <div class="card" style="width: 17rem;">
-    <span class="border border-primary"></span>
-  <div class="card-body">
-    <h5 class="card-title text-primary">Standard</h5>
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $20,000</p>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <h2>$179</h2>
-    <button type="button" class="btn btn-outline-primary">BUY NOW</button>
-    <p class="card-text">One-Time Payment Only</p>
-    <b>Profit Target</b>
-    <p class="card-text">2,000 (10%)</p>
-    <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
-    <b>Minimum Trading Days</b>
-    <p class="card-text">3 Days</p>
-  </div> 
-  <span class="border border-primary"></span>
-  </div>
-    
-  <span class="border border-info"></span>
-    <div class="card" style="width: 18rem;">
-    <span class="border border-info"></span>
-  <div class="card-body">
-    <h5 class="card-title text-info">Exective</h5>
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $50,000</p>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <h2>$399</h2>
-    <button type="button" class="btn btn-outline-info">BUY NOW</button>
-    <p class="card-text">One-Time Payment Only</p>
-    <b>Profit Target</b>
-    <p class="card-text">$5,000 (10%)</p>
-    <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
-    <b>Minimum Trading Days</b>
-    <p class="card-text">3 Days</p>
-  </div> 
-  <span class="border border-info"></span>
-  </div>
-   
-  <span class="border border-success"></span>
-    <div class="card" style="width: 18rem;">
-    <span class="border border-success"></span>
-  <div class="card-body">
-    <h5 class="card-title text-success">VIP</h5>
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $100,000</p>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <h2>$999</h2>
-    <button type="button" class="btn btn-outline-success">BUY NOW</button>
-    <p class="card-text">One-Time Payment Only</p>
-    <b>Profit Target</b>
-    <p class="card-text">$8,000 (8%)</p>
-    <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
-    <b>Minimum Trading Days</b>
-    <p class="card-text">3 Days</p>
-  </div> 
-  <span class="border border-success"></span>
-</div>
-<span class="border border-success"></span>
-  </center>
+
+<section>
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card1">
+            <div class="title">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              <h2>Basic</h2>
+            </div>
+            <div class="price">
+              <h4><sup>$</sup>25</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 5 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 50 Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Subscribe Now </a>
+          </div>
+        </div>
+         
+        <div class="col-sm-4">
+          <div class="card2">
+            <div class="title">
+              <i class="fa fa-plane" aria-hidden="true"></i>
+              <h2>Standard</h2>
+            </div>
+            <div class="price">
+              <h4><sup>$</sup>50</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 75 GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 200 Email Address </li>
+              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Subscribe Now </a>
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="card3">
+            <div class="title">
+              <i class="fa fa-rocket" aria-hidden="true"></i>
+              <h2>Premium</h2>
+            </div>
+            <div class="price">
+              <h4><sup>$</sup>100</h4>
+            </div>
+            <div class="option">
+              <ul>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited GB Space </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> 100 Domain Names </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited Email Address </li>
+              <li> <i class="fa fa-check" aria-hidden="true"></i> Live Support </li>
+              </ul>
+            </div>
+            <a href="#">Subscribe Now </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+</section>
+<div style="padding: 40px 25px 25px 25px;">
     <center><a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Start</a>
     </center>
   </div>
-   
+  </div>
+  </div>
 
   <div style="padding: 40px 25px 25px 25px;">
   <div class="card" style="margin-top: 50px; border-radius: 50px;">
