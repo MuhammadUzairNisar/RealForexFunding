@@ -16,7 +16,7 @@
  
 .card1{
   position: relative;
-  max-width: 300px;
+  max-width: 260px;
   height: auto;
   background: linear-gradient(-45deg,#fe0847,#feae3f);
   border-radius: 15px;
@@ -124,7 +124,7 @@ font-size: 16px;
 
 .card2{
   position: relative;
-  max-width: 300px;
+  max-width: 260px;
   height: auto;
   background: linear-gradient(-45deg,#fe0847,#feae3f);
   border-radius: 15px;
@@ -233,7 +233,7 @@ font-size: 16px;
 
 .card3{
   position: relative;
-  max-width: 300px;
+  max-width: 360px;
   height: auto;
   background: linear-gradient(-45deg,#fe0847,#feae3f);
   border-radius: 15px;
@@ -394,69 +394,74 @@ font-size: 16px;
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="card1">
+      <div class="col-sm-4">
+          <div class="card3">
             <div class="title">
               <i class="fa fa-paper-plane" aria-hidden="true"></i>
-              <h2>Lite</h2>
+              <h2>LITE</h2>
             </div>
             <div class="price">
-              <h4><sup>$</sup>25</h4>
+              <h4><sup>$</sup>99</h4>
             </div>
             <div class="option">
-              <ul>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 GB Space </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 5 Domain Names </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 50 Email Address </li>
-              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
-              </ul>
+    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
+    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+    <p class="card-text">One-Time Payment Only</p>
+    <b>Profit Target</b>
+    <p class="card-text">$1,000 (10%)</p>
+    <b>Total Challenge Duration</b>
+    <p class="card-text">90 Days</p>
             </div>
             <a href="#">Buy Now </a>
           </div>
         </div>
-         
+
         <div class="col-sm-4">
-          <div class="card2">
+          <div class="card3">
             <div class="title">
               <i class="fa fa-plane" aria-hidden="true"></i>
-              <h2>Standard</h2>
+              <h2>STANDARD</h2>
             </div>
             <div class="price">
-              <h4><sup>$</sup>50</h4>
+              <h4><sup>$</sup>179</h4>
             </div>
             <div class="option">
-              <ul>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 75 GB Space </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 20 Domain Names </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 200 Email Address </li>
-              <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
-              </ul>
+    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
+    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+    <p class="card-text">One-Time Payment Only</p>
+    <b>Profit Target</b>
+    <p class="card-text">$2,000 (10%)</p>
+    <b>Total Challenge Duration</b>
+    <p class="card-text">90 Days</p>
             </div>
             <a href="#">Buy Now </a>
           </div>
         </div>
+  
+  
         
         <div class="col-sm-4">
           <div class="card3">
             <div class="title">
               <i class="fa fa-rocket" aria-hidden="true"></i>
-              <h2>Elite</h2>
+              <h2>VIP</h2>
             </div>
             <div class="price">
-              <h4><sup>$</sup>100</h4>
+              <h4><sup>$</sup>999</h4>
             </div>
             <div class="option">
-              <ul>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited GB Space </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> 100 Domain Names </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> Unlimited Email Address </li>
-              <li> <i class="fa fa-check" aria-hidden="true"></i> Live Support </li>
-              </ul>
+    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
+    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+    <p class="card-text">One-Time Payment Only</p>
+    <b>Profit Target</b>
+    <p class="card-text">$8,000 (8%)</p>
+    <b>Total Challenge Duration</b>
+    <p class="card-text">90 Days</p>
             </div>
             <a href="#">Buy Now </a>
           </div>
         </div>
-        
+  
       </div>
     </div>
     </div>
@@ -467,8 +472,10 @@ font-size: 16px;
   </div>
   </div>
   </div>
+  </div>
+    </div>
 
-  <div style="padding: 40px 25px 25px 25px;">
+    <div style="padding: 40px 25px 25px 25px;">
   <div class="card" style="margin-top: 50px; border-radius: 50px;">
   <div style="padding: 50px 25px 25px 25px;">
 
@@ -479,7 +486,7 @@ font-size: 16px;
 <div style="padding: 40px 25px 25px 25px;">
 <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-6">
         <div class="btn-group-vertical flex-container">
 <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fas fa-chart-pie" aria-hidden="true"></i>CFDs
@@ -510,7 +517,6 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
 <section class="section-challenge lg:bg-gray-200">
 <a href="#">Learn more -></a> 
 </div>
-<center>
 </div>
     </div>
   </div>
@@ -531,7 +537,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   <img class="mt-6" src="https://cdn.thetradingpit.com/pages/homepage/start-side-image-en-us.png" alt="">
   <br>
   <br>
- <a href="#" class="btn btn-primary">Get Started!</a></center>
+  <a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started!</a>
  <center>
   <div style="padding: 25px 25px 25px 25px;">
   <div class="container">
@@ -740,7 +746,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
     </div>
     
   
-  <div class="card" style="margin-top: 10px; border-radius: 30px;">
+  <!-- <div class="card" style="margin-top: 10px; border-radius: 30px;"> -->
     <div style="padding: 50px 25px 25px 50px;">
     <img class="w-full max-w-28 max-h-16" src="https://cdn.thetradingpit.com/global/partners/atas-v2.svg" alt=""width="100" height="200">
     <img class="w-full max-w-28 max-h-16" src="https://cdn.thetradingpit.com/global/partners/quantower.svg" alt="">
