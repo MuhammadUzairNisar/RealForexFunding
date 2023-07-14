@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/homePage',[HomeController::class,'homePage'])->name('HomePage');
+Route::get('/adminPanel',[AdminController::class,'adminPanel'])->name('AdminPanel');
