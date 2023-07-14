@@ -342,28 +342,8 @@ font-size: 16px;
   </style>
 
 
-<div class="row" style="margin-top: 10px;padding: 25px 25px 0px 100px;">
-  <div class="col-md-6">
-    <!-- Left side with text -->
-    <div>
-      <!-- <h1>Be Your Own Hero</h1> -->
-      <h2>We Fund</h2>
-      <h2>We Trade!</h2>
-      <h1>
-      <span style="color: #A761FF;">BE YOUR OWN HERO</span>
-</h1>
-<a href="#" class="btn btn-success btn-lg active" role="button" aria-pressed="true">BUY INSTANT ACCOUNT</a>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <!-- Right side with carousel -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
+
+      <!-- <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="https://images.unsplash.com/photo-1629339942248-45d4b10c8c2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="First slide">
         </div>
@@ -384,44 +364,9 @@ font-size: 16px;
       </a>
     </div>
   </div>
-</div>
+</div> -->
 
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "FOREXCOM:SPXUSD",
-      "title": "S&P 500"
-    },
-    {
-      "proName": "FOREXCOM:NSXUSD",
-      "title": "US 100"
-    },
-    {
-      "proName": "FX_IDC:EURUSD",
-      "title": "EUR/USD"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    }
-  ],
-  "showSymbolLogo": true,
-  "colorTheme": "dark",
-  "isTransparent": false,
-  "displayMode": "adaptive",
-  "locale": "en"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+
 
 <div style="padding: 40px 25px 25px 40px;">
   <div class="card" style="margin-top: 50px; border-radius: 50px;">
@@ -453,7 +398,7 @@ font-size: 16px;
           <div class="card1">
             <div class="title">
               <i class="fa fa-paper-plane" aria-hidden="true"></i>
-              <h2>Basic</h2>
+              <h2>Lite</h2>
             </div>
             <div class="price">
               <h4><sup>$</sup>25</h4>
@@ -466,7 +411,7 @@ font-size: 16px;
               <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
               </ul>
             </div>
-            <a href="#">Subscribe Now </a>
+            <a href="#">Buy Now </a>
           </div>
         </div>
          
@@ -487,7 +432,7 @@ font-size: 16px;
               <li> <i class="fa fa-times" aria-hidden="true"></i> Live Support </li>
               </ul>
             </div>
-            <a href="#">Subscribe Now </a>
+            <a href="#">Buy Now </a>
           </div>
         </div>
         
@@ -495,7 +440,7 @@ font-size: 16px;
           <div class="card3">
             <div class="title">
               <i class="fa fa-rocket" aria-hidden="true"></i>
-              <h2>Premium</h2>
+              <h2>Elite</h2>
             </div>
             <div class="price">
               <h4><sup>$</sup>100</h4>
@@ -508,7 +453,7 @@ font-size: 16px;
               <li> <i class="fa fa-check" aria-hidden="true"></i> Live Support </li>
               </ul>
             </div>
-            <a href="#">Subscribe Now </a>
+            <a href="#">Buy Now </a>
           </div>
         </div>
         
