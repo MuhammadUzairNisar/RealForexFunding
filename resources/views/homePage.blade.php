@@ -339,32 +339,543 @@ font-size: 16px;
     text-decoration: none;
 }
 
+
+
+/* BEGIN CARD DESIGN */
+.hero {
+  display: inline-block;
+  position: relative;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+}
+
+.hero-profile-img {
+  height: 70%;
+}
+
+.hero-description-bk {
+  background-image: linear-gradient(0deg , #3f5efb, #fc466b);
+  border-radius: 30px;
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+  transform: skew(19deg, -9deg);
+}
+
+.second .hero-description-bk {
+  background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
+}
+
+.hero-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 30%;
+  left: 30px;
+  overflow:hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-logo img {
+  height: 100%;
+}
+
+.hero-description {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  left: 150px;
+  bottom: 26%;
+}
+
+.hero-btn {
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  bottom: 10%;
+  padding: 10px 20px;
+  border: 1px solid #fff;
+}
+
+.hero-btn a {
+  color: #fff;
+}
+
+.hero-date {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+}
+/* END CARD DESIGN */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  background-color: #eee;
+  min-height: 100vh;
+}
+.btn i:before {
+  width: 14px;
+  height: 14px;
+  position: fixed;
+  color: #fff;
+  background: #0077B5;
+  padding: 10px;
+  border-radius: 50%;
+  top:5px;
+  right:5px;
+}
+
+
+
+.dark {
+	background: #110f16;
+}
+
+
+.light {
+	background: #f3f5f7;
+}
+
+a, a:hover {
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+	margin: 2rem 0;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+/* Cards */
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+
+	&.dark {
+		background-color: #18151f;
+	}
+	&.light {
+		background-color: #e1e5ea;
+	}
+	
+	.t-dark {
+		color: #18151f;
+	}
+	
+  a {
+    color: inherit;
+  }
+	
+	h1,	.h1 {
+		margin-bottom: 0.5rem;
+		font-weight: 500;
+		line-height: 1.2;
+	}
+	
+	.small {
+		font-size: 80%;
+	}
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+		padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n+1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n+0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n+1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n+0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+		.postcard__text {
+      padding: 2rem 3.5rem;
+    }
+		
+		.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+	
+  .postcard.dark {
+		.postcard__text:before {
+			background: #18151f;
+		}
+  }
+	.postcard.light {
+		.postcard__text:before {
+			background: #e1e5ea;
+		}
+  }
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+	background: $main-green;
+	color: black;
+}
+.green .postcard__title:hover {
+	color: $main-green;
+}
+.green .postcard__bar {
+	background-color: $main-green;
+}
+.green::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-green-rgb-015,
+		transparent 50%
+	);
+}
+.green:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+	background: $main-blue;
+}
+.blue .postcard__title:hover {
+	color: $main-blue;
+}
+.blue .postcard__bar {
+	background-color: $main-blue;
+}
+.blue::before {
+	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+	background: $main-red;
+}
+.red .postcard__title:hover {
+	color: $main-red;
+}
+.red .postcard__bar {
+	background-color: $main-red;
+}
+.red::before {
+	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
+}
+.red:nth-child(2n)::before {
+	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+	background: $main-yellow;
+	color: black;
+}
+.yellow .postcard__title:hover {
+	color: $main-yellow;
+}
+.yellow .postcard__bar {
+	background-color: $main-yellow;
+}
+.yellow::before {
+	background-image: linear-gradient(
+		-30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+.yellow:nth-child(2n)::before {
+	background-image: linear-gradient(
+		30deg,
+		$main-yellow-rgb-015,
+		transparent 50%
+	);
+}
+
+@media screen and (min-width: 769px) {
+	.green::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+	.green:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-green-rgb-015,
+			transparent 50%
+		);
+	}
+
+	.blue::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-blue-rgb-015,
+			transparent 50%
+		);
+	}
+	.blue:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
+	}
+
+	.red::before {
+		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
+	}
+	.red:nth-child(2n)::before {
+		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
+	}
+	
+	.yellow::before {
+		background-image: linear-gradient(
+			-80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+	.yellow:nth-child(2n)::before {
+		background-image: linear-gradient(
+			80deg,
+			$main-yellow-rgb-015,
+			transparent 50%
+		);
+	}
+}
+
+
+/* .card-container{
+  display: flex; */
+  
+  .card5{
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    
+    .card-count-container{
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 200px;
+      padding: 20px 0px;
+    }
+    
+    .card-count{
+      font-weight: bold;
+      font-size: 100px;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      margin: auto;
+      margin-right: -50px;
+      padding-right: 25px;
+      overflow: hidden;
+      color: #ffffff;
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .card-content{
+      padding: 20px;
+      padding-top: 0px;
+      
+      > h2{
+        margin-top: 0px;
+        text-align: center;
+      }
+    }
+    
+    .card-footer{
+      padding: 20px;
+      color: #ffffff;
+    }
+    
+    &:nth-child(1){
+      .card-count, .card-footer{
+        background-image: linear-gradient(90deg, #f6671f, #c01b1c);
+      }
+    }
+    
+    &:nth-child(2){
+      .card-count, .card-footer{
+        background-image: linear-gradient(90deg, #fec22f, #ea9826);
+      }
+    }
+    
+    &:nth-child(3){
+      .card-count, .card-footer{
+        background-image: linear-gradient(90deg, #6fc6a9, #058ba9);
+      }
+    }
+    
+    &:hover{
+      .card-count{
+        width: 160px;
+        height: 160px;
+      }
+    }
+  }
+  
+  media (max-width: 767px){
+    flex-wrap: wrap;
+  }
+
+
   </style>
 
 
 
-      <!-- <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="https://images.unsplash.com/photo-1629339942248-45d4b10c8c2f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://images.unsplash.com/photo-1612178991541-b48cc8e92a4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=868&q=80" alt="Third slide">
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
-</div> -->
+    
 
 
 
@@ -534,73 +1045,111 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   Get started in 3 steps
   </h1>
   
-  <img class="mt-6" src="https://cdn.thetradingpit.com/pages/homepage/start-side-image-en-us.png" alt="">
+  <img width="750" height="500"class="mt-6" src="https://www.pngall.com/wp-content/uploads/8/Stock-Trading-Transparent.png" alt="">
   <br>
   <br>
   <a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started!</a>
  <center>
   <div style="padding: 25px 25px 25px 25px;">
-  <div class="container">
-    <div class="row">
-  <div class="card bg-dark" style="margin-top: 10px; border-radius: 30px;">
-    <div style="padding: 25px 25px 25px 25px;">
-                            <h5 class="text-white">CHOOSE A TRADING PROGRAM</h5>
-                            <p class="text-white">To become a funded trader, you must undergo an evaluation challenge to show trading consistency and risk management qualities</p>
-                        </div>
-                    </div>
-</div>
-</div>
 
 
-<div class="container">
-    <div class="row">
-  <div class="card bg-dark" style="margin-top: 10px; border-radius: 30px;">
-    <div style="padding: 25px 25px 25px 60px;">
-                            <h5 class="text-white">PASS THE CHALLENGE</h5>
-                            <p class="text-white">Step up your trading program with simple and clear rules. As you move through your plan’s steps, the possibilities increase</p>
-                        </div>
-                    </div>
-</div>
-</div>
-<div class="container">
-    <div class="row">
-  <div class="card bg-dark" style="margin-top: 10px; border-radius: 30px;">
-    <div style="padding: 25px 25px 25px 60px;">
-                            <h5 class="text-white">FUNDED PARTNER</h5>
-                            <p class="text-white">You will become a funded partner of The Trading Pit with $5M in funding to keep up to 80% of your profits. Let’s get started!</p>
-                        </div>
-                    </div>
-</div>
-</div>
-</div>
-</center>
-<div style="padding:80px 25px 25px 25px;">
-<div class="container">
-<div style="padding:25px 25px 25px 25px;">
-<!-- <div class="card" style="margin-top: 25px; border-radius: 50px;">  -->
+		
+
+
+	<div class="container py-2">
+	
+
+		<article class="postcard light blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://images.unsplash.com/photo-1635501300433-ed4e02fce51c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="Image Title" />
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title blue"><a href="#">CHOOSE A TRADING PROGRAM</a></h1>
+				
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Choosing a trading program can be a strategic decision for individuals looking to participate in financial markets and achieve their investment goals. Here are several compelling reasons why one might choose a trading program.
+           Trading programs provide individuals with direct access to financial markets that may otherwise be difficult to navigate. They offer the opportunity to trade a wide range of financial instruments such as stocks, bonds, commodities, currencies, and derivatives.</div>
+				
+			</div>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">PASS THE CHALLENGE</a></h1>
+			
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">"Passing the challenge" in trading refers to successfully meeting specific requirements or criteria set by a trading firm or platform in order to gain access to additional trading capital or advanced features. These challenges are often designed to assess a trader's skills, risk management abilities, and consistency in generating profits. Step up your trading program with simple and clear rules. As you move through your plan’s steps, the possibilities increase.</div>
+				
+			</div>
+		</article>
+		</article>
+		<article class="postcard light red">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://images.unsplash.com/photo-1645731504636-72725e46b26b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="Image Title" />	
+			</a>
+			<div class="postcard__text t-dark">
+				<h1 class="postcard__title red"><a href="#">FUNDED PARTNER</a></h1>
+			
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">"To become a funded trader, you must undergo an evaluation challenge to show trading consistency and risk management qualities.
+        As a funded partner, traders gain access to substantial trading capital provided by the trading firm or platform. This capital allows them to trade with larger sums of money than they may have had access to previously, amplifying their profit potential.
+        </div>
+				
+			</div>
+		</article>
+	</div>
+</section>
+  
+
     <div style="padding: 25px 25px 25px 25px;">
     <center>
       <h1><span style="color: #000000;">How we empower you</span></h1>
     
   <!-- <h1 class="card-title">How we empower you</h1> -->
   </center>
-<div style="padding:25px 25px 25px 25px;">
-<div class="row">
-<div class="col-lg-6 col-md-6 col-xs-6">
-        <img style= "width: 100%; height: 100%"  src="https://images.unsplash.com/photo-1468971050039-be99497410af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" class="rounded" alt="Rounded Image">
-        <div class="carousel-caption">
-              <p>At The Trading Pit, I have not only learned how to trade but also how to manage risk.
-                 It’s awesome to work with a team that genuinely cares about your success.<p>
-            </div>
-      </a>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<div class="btn">
+  <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
 </div>
-<div class="col-lg-6 col-md-6 col-xs-6">
-        <img style= "width: 100%; height: 100%" src="https://images.unsplash.com/photo-1620228885847-9eab2a1adddc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=773&q=80" class="rounded" alt="Rounded Image">
-        <div class="carousel-caption">
-              <p>The Trading Pit set-up is truly ingenious. They care about their traders and provide invaluable resources.
-                 I’ve surpassed even my own expectations. I am a way better trader today because of it.<p>
-            </div>
-      </a>
+
+<div class="first hero">
+  <img class="hero-profile-img" src="https://images.unsplash.com/photo-1642790261487-5b7e444c0dce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1429&q=80" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="https://w7.pngwing.com/pngs/384/814/png-transparent-market-market-text-investment-logo.png" alt="">
+  </div>
+  <div class="hero-description">
+    <p>I have managed how to manage risk.
+                 </p>
+  </div>
+  <div  class="hero-date">
+    <p>14.07.2023</p>
+  </div>
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+<div class="second hero">
+  <img class="hero-profile-img" src="https://images.unsplash.com/photo-1609554496796-c345a5335ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="https://cdn.pixabay.com/photo/2016/11/10/05/25/bitcoin-1813507_1280.png" alt="">
+  </div>
+  <div class="hero-description">
+    <p>The Trading set-up is truly ingenious.</p>
+  </div>
+  <div  class="hero-date">
+    <p>14.07.2023</p>
+  </div>
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
 </div>
 
 
@@ -630,7 +1179,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   </div>
   <div class="col-md-6">
     <div>
-      <img alt="Web Studio" class="img-fluid" src="https://cdn.thetradingpit.com/pages/homepage/how-points-card-en-us.png">
+      <img alt="Web Studio" class="img-fluid" src="https://img.freepik.com/free-vector/trading-linear-design_1284-36136.jpg?w=996&t=st=1689332736~exp=1689333336~hmac=22c233a9b08373213046a37c7fed603f2584a4c86f88554939e1899af9b169fd">
     </div>
   </div>
     </div>
@@ -657,92 +1206,73 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
 </button>
 <div style="padding: 25px 25px 25px 25px;">
-<div class="container">
-  <div class="row">
-<video class="border border-warning" autoplay="" loop="" muted="" width="300" height="200">
-  <source src="https://cdn.thetradingpit.com/pages/homepage/journey-challenge-video.mp4" type="video/mp4">
-</video>
+
+
+<div class="card-container">
+  <div class="card5">
+    <div class="card-count-container">
+      <div class="card-count">1</div>
+    </div>
     
-<div style="padding: 25px 25px 25px 25px;">
-  <div class="card bg-warning" style="margin-top: 10px; border-radius: 30px;">
-    <div style="padding: 50px 25px 25px 50px;">
-<div class="text-left lg:px-8 py-8 lg:border-4 lg:border-white lg:rounded-2xl w-10/12 lg:w-8/12">
-        <!-- <h6 class="flex font-bold text-xl pb-4 lg:pb-4 lg:pt-4 lg:px-8 items-center"> -->
-         <center><h1>&#49;</h1>
-                        <p><strong>CHALLENGE</strong></p>
-        <p>Choose the program that fits you. The better you become, the more funds you unlock. Grow your account and start earning!</p>
-        </center> 
-        <ul class="list-check-mark-primary-300 pl-6 lg:pl-12">
-                            <li class="text-white">Simple rules</li>
-                            <li class="text-white">Flexilbe Trading</li>
-                            <li class="text-white">Overnight &amp; weekend trades on Forex</li>
-                            <li class="text-white">One-time fee 100% refundable</li>
-                    </ul>
+    <div class="card-content">
+      <h2>CHALLENGE</h2>
+      Simple rules
+      <br>
+      Flexilbe Trading
+      <br>
+      Overnight weekend trades on Forex
+      <br>
+      One-time fee 100% refundable
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-<div class="container">
-<div style="padding: 25px 25px 25px 25px;">
-  <div class="row">
-<video class="border border-primary" autoplay="" loop="" muted="" width="300" height="200">
-  <source src="https://cdn.thetradingpit.com/pages/homepage/journey-profit-video.mp4" type="video/mp4">
-</video>
     
-<div style="padding: 25px 25px 25px 25px;">
-  <div class="card bg-primary" style="margin-top: 10px; border-radius: 30px;">
-    <div style="padding: 50px 25px 25px 50px;">
-<div class="text-left lg:px-8 py-8 lg:border-4 lg:border-white lg:rounded-2xl w-10/12 lg:w-8/12">
-          <center><h1>&#50;</h1>
-                        <p><strong>PROP TRADING</strong></p>
-        <p>Your account can grow to $5M funding power with no deadline to hit targets. Profits keep growing as we do!</p>
-        </center>
-        <ul class="list-check-mark-primary-300 pl-6 lg:pl-12">
-                            <li class="text-white">Scale up to $5M</li>
-                            <li class="text-white">Fast Payouts at each level</li>
-                            <li class="text-white">Earn up to $562,400</li>
-                    </ul>
+    <div class="card-footer">
+    Choose the program that fits you. The better you become, the more funds you unlock. Grow your account and start earning!
     </div>
+  </div>
+  
+  <div class="card5">
+    <div class="card-count-container">
+      <div class="card-count">2</div>
     </div>
+    <div class="card-content">
+      <h2>PROP TRADING</h2>
+      Scale up to $5M
+      <br>
+      Fast Payouts at each level
+      <br>
+      Earn up to $562,400                     
+                   
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="container">
-<div style="padding: 25px 25px 25px 25px;">
-  <div class="row">
-<video class="border border-success" autoplay="" loop="" muted="" width="300" height="200">
-  <source src="https://cdn.thetradingpit.com/pages/homepage/journey-certified-video.mp4" type="video/mp4">
-</video>
     
-<div style="padding: 25px 25px 25px 25px;">
-  <div class="card bg-success" style="margin-top: 10px; border-radius: 30px;">
-    <div style="padding: 50px 25px 25px 50px;">
-<div class="text-left lg:px-8 py-8 lg:border-4 lg:border-white lg:rounded-2xl w-10/12 lg:w-8/12">
-        <center><h1>&#51;</h1>
-                        <p><strong>THE TRADING PIT CHAMPION</strong></p>
-        <p>Your skills are fully funded by The Trading Pit. No more risking your money! Trade with our funds and even become a professional fund manager if you want!</p>
-        </center>
-        <ul class="list-check-mark-primary-300 pl-6 lg:pl-12">
-                            <li class="text-white">Fully Funded</li>
-                            <li class="text-white">Keep up to 80% of profits</li>
-                            <li class="text-white">Pursue a professional career</li>
-                    </ul>
-                    
+    <div class="card-footer">
+    Your account can grow to $5M funding power with no deadline to hit targets. Profits keep growing as we do!
     </div>
+  </div>
+  
+  <div class="card5">
+    <div class="card-count-container">
+      <div class="card-count">3</div>
     </div>
+    <div class="card-content">
+      <h2>The Forex Trading</h2>
+      Fully Funded. 
+                            <br>
+                            Keep up to 80% of profits
+                            <br>
+                           Pursue a professional career
     </div>
+    
+    <div class="card-footer">
+    No more risking your money! Trade with our funds and even become a professional fund manager if you want!
     </div>
-    </div>
-    </div>
-    </div>
+  </div>
+</div>
+
+
+    
     <div style="padding: 25px 25px 25px 25px;">
     <center>
-    <a href="#" class="btn btn-success">Learn More</a>
+    <a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Learn more!</a>
     </div>
     
   
