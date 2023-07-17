@@ -424,7 +424,7 @@ body {
   background-color: #eee;
   min-height: 100vh;
 }
-.btn i:before {
+/* .btn i:before {
   width: 14px;
   height: 14px;
   position: fixed;
@@ -434,7 +434,7 @@ body {
   border-radius: 50%;
   top:5px;
   right:5px;
-}
+} */
 
 
 
@@ -893,9 +893,9 @@ a, a:hover {
 <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fab fa-btc" aria-hidden="true"></i>CRYPTOS
 </button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
+<!-- <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
-</button>
+</button> -->
 <br>
 <br>
 <div style="padding: 40px 25px 25px 25px;">
