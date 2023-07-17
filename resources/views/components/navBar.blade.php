@@ -97,6 +97,7 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 }
 
 
+
 /* mobile view */
 @media (max-width:500px)
 {
@@ -140,13 +141,17 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
     margin-bottom: 40px;
 }
 }
+.shrink {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
 </style>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<nav class="navbar navbar-expand-md navbar-dark fixed-top" id="banner">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top shrink" id="banner">
 	<div class="container">
   <!-- Brand -->
   <a class="navbar-brand" href="#"><span>Real Forex </span> Funds</a>
@@ -234,3 +239,17 @@ nav{-webkit-transition: padding-top .3s,padding-bottom .3s;
 </div>
 <!-- TradingView Widget END -->
 <center>
+<script>
+  $(document).ready(function() {
+    // Check if user has scrolled down
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        // Hide the navbar
+        $('.navbar').addClass('shrink');
+      } else {
+        // Show the navbar
+        $('.navbar').removeClass('shrink');
+      }
+    });
+  });
+</script>
