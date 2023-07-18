@@ -893,9 +893,9 @@ a, a:hover {
 <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fab fa-btc" aria-hidden="true"></i>CRYPTOS
 </button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
+<!-- <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
-</button>
+</button> -->
 <br>
 <br>
 <div style="padding: 40px 25px 25px 25px;">
@@ -1111,7 +1111,10 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   </center>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
+<div class="btn">
+  <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
 </div>
 
 <div class="first hero">
@@ -1186,7 +1189,6 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
 </div>
 </div>
 </div>
-<div style="padding: 25px 25px 25px 25px;">
 <div class="container">
 <center><h2 class="card-title">Steps to Funding</h2>  </center>
 <center>
