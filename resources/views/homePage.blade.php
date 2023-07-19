@@ -882,6 +882,7 @@ a, a:hover {
 <div style="padding: 40px 25px 25px 40px;">
   <div class="card" style="margin-top: 50px; border-radius: 50px;">
   <center>
+  <div style="padding: 40px 25px 25px 40px;">
     <div class="card-body">
       <h5 class="card-title">Rise to the Challenge</h5>
       <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
@@ -893,9 +894,9 @@ a, a:hover {
 <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fab fa-btc" aria-hidden="true"></i>CRYPTOS
 </button>
-<!-- <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
+<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
-</button> -->
+</button>
 <br>
 <br>
 <div style="padding: 40px 25px 25px 25px;">
