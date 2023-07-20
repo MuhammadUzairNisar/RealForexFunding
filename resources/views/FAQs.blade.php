@@ -103,146 +103,19 @@ details[open] .control-icon-expand {
   </svg>
 </div>
 
-<details open>
-  <summary>
-  What is the RFF real Funded Account?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Once a trader receives the account we will connect them to our live broker and provide them with login details 
-to a real 500$ to $10,000 trading account. No matter what, rest assured that any profits generated on the account will be paid out by us.</p>
-</details>
 
-<details>
-
-  <summary>
-  How can I request my profits?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Simply fill out the payout request form by going to official email support@realforexfunds.com and provide your perfect money account.</p>
-</details>
-
+  
+@foreach ($data as $item)
 <details>
   <summary>
-  Do I need a license to trade on a funded account?   
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
+    {{ $item->question }}
+    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
+    </svg>
+    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
+    </svg>
   </summary>
-  <p>A license is not required for working with us.</p>
+  <p>{{ $item->answer }}</p>
 </details>
-
-<details>
-  <summary>
-  Can I trade from anywhere in the world irrespective of my nationality?  
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>We accept investors and traders from all over the world but we cannot accept customers from the United States (US). 
-  We are looking for traders and investors around the world who are at least 2 years. If you know how to trade, invest & proficiently and apply strict risk management, 
-that is all we are looking for, if your new to the game thats not an issue either. There is no other qualification required in order to get an instant funded account.
-  </p>
-</details>
-
-<details>
-  <summary>
-  Do you offer Leverage?   
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Yes, we offer leverage to all our customers on all products ranging up to 1:100 for Major pairs on our Premium challenge accounts, much higher than all of our competitors.</p>
-</details>
-
-<details>
-  <summary>
-  Do you offer Islamic accounts?  
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Of course, these are priced slightly higher to take into account the swap fee features.</p>
-</details>
-
-<details>
-  <summary>
-  How much percentage of profit can I keep?  
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Every 30 days, the trader will receive a payout equivalent to 52%/26% of all the profits generated on the trading account.</p>
-</details>
-
-<details>
-  <summary>
-  Who can be a Funded Trader?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Anyone whose age is 18 or more can become a Funded Trader.</p>
-</details>
-
-<details>
-  <summary>
-  Can I trade news?   
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Yes, you can trade news.</p>
-</details>
-
-<details>
-  <summary>
-  Do I need to close all my positions overnight or weekends?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>All traders must close their positions before the markets close for the weekend. If you don’t close your positions, we will suspended the account.</p>
-</details>
-
-<details>
-  <summary>
-  Are there any monthly fees?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>There are no monthly fees on the Experienced & Advanced Trader programs. The program fee are a one off charge.</p>
-</details>
-
-<details>
-  <summary>
-  Can I take hedging positions?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>Trades can be executed in both directions on the same market at the same time.</p>
-</details>
-
-<details>
-  <summary>
-  Do we refund fees?
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" /></svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" /></svg>
-  </summary>
-  <p>We refund fees once traders reach their 5th withdrawal.
-Starting Balance
-<br>            
-Max. Daily Loss  
-<br>               
-Max. Overall Loss     
-<br>      
-Min. Trading Days   
-<br>            
-Trading Leverage    
-<br>      
-Refundable Fees</p>
-</details>
-
-<!-- <details>
-    @foreach ($data as $item)
-        <summary>
-            {{ $item->question }}
-        </summary>
-        <p>
-            {{ $item->answer }}
-        </p>
-    @endforeach
-</details> -->
+@endforeach
