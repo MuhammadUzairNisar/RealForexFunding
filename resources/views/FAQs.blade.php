@@ -235,3 +235,14 @@ Trading Leverage
 <br>      
 Refundable Fees</p>
 </details>
+
+<!-- <details>
+    @foreach ($data as $item)
+        <summary>
+            {{ $item->question }}
+        </summary>
+        <p>
+            {{ $item->answer }}
+        </p>
+    @endforeach
+</details> -->
