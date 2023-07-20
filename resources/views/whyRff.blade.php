@@ -1,4 +1,4 @@
-
+@include('.components.slideshow')
 <style>
 /* .container {
   width: 100%;
@@ -38,7 +38,7 @@ h2:hover {
         -o-transition: all .5s;
         transition: all .5s;
       }
-      .bg-one {
+      /* .bg-one {
         background-image: url(https://cdn.pixabay.com/photo/2018/01/17/04/14/stock-exchange-3087396_1280.jpg);
       }
     
@@ -57,7 +57,7 @@ h2:hover {
         height: 50px;
         cursor: pointer;
         text-decoration: none;
-      }
+      } */
       .container:hover .child,
       .container:focus .child {
         -ms-transform: scale(1.2);
@@ -160,14 +160,14 @@ body{
   height:10px;
   top:24px;
   left:-4px;
-  background:rgba(233,33,99,1);
+  background:rgba(255,0,0);
   border-radius:50%;
   box-shadow:0 0 0 3px rgba(233,33,99,0.2);
 }
 .timeline ul li h3{
   padding:0;
   margin:0;
-  color:rgba(233,33,99,1);
+  color:rgba(255,0,0);
   font-weight:600;
 }
 .timeline ul li p{
@@ -189,7 +189,7 @@ body{
   background:rgba(0,0,0);
   color:white;
   border-radius:18px;
-  box-shadow:0 0 0 3px rgba(233,33,99,0.3);
+  box-shadow:0 0 0 3px rgba(255,0,0,0.5);
 }
 .timeline ul li:nth-child(even) .time
 {
@@ -201,7 +201,7 @@ body{
   background:rgba(0,0,0);
   color:#fff;
   border-radius:18px;
-  box-shadow:0 0 0 3px rgba(233,33,99,0.3);
+  box-shadow:0 0 0 3px rgba(255,0,0,0.5);
 }
 @media(max-width:1000px)
 {
@@ -323,10 +323,10 @@ body {
   padding: 100px 0;
 }
 .ag-courses_item {
-  -ms-flex-preferred-size: calc(33.33333% - 30px);
-  flex-basis: calc(25.33333% - 30px);
+  -ms-flex-preferred-size: calc(33.33333% - 34px);
+  flex-basis: calc(33.33333% - 34px);
 
-  margin: 0 15px 100px;
+  margin: 0 50px 100px;
 
   overflow: hidden;
 
@@ -365,7 +365,7 @@ body {
   position: relative;
 }
 .ag-courses-item_date-box {
-  font-size: 15px;
+  font-size: 18px;
   color: #FFF;
 
   z-index: 2;
@@ -454,13 +454,7 @@ body {
 
 
   
-    <div class="wrapper">
-      <div class="container">
-        <div class="child bg-one">
-          <span>RFF Contributions</span>
-        </div>
-      </div>
-      
+  
       
     
     <div class="container">
@@ -545,16 +539,30 @@ body {
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          50%
+          27%
         </div>
 
         <div class="ag-courses-item_date-box">
-         1 month
+        Instant Monthly Account
         </div>
       </a>
     </div>
 
     <div class="ag-courses_item">
+      <a href="#" class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        52% 
+        </div>
+
+        <div class="ag-courses-item_date-box">
+        Instant Monthly Account
+        </div>
+      </a>
+    </div>
+
+    <!-- <div class="ag-courses_item">
       <a href="#" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
 
@@ -581,7 +589,6 @@ body {
         </div>
       </a>
     </div>
-
     <div class="ag-courses_item">
       <a href="#" class="ag-courses-item_link">
         <div class="ag-courses-item_bg"></div>
@@ -607,20 +614,7 @@ body {
          1 month
         </div>
       </a>
-    </div>
-    <div class="ag-courses_item">
-      <a href="#" class="ag-courses-item_link">
-        <div class="ag-courses-item_bg"></div>
-
-        <div class="ag-courses-item_title">
-          50%
-        </div>
-
-        <div class="ag-courses-item_date-box">
-         1 month
-        </div>
-      </a>
-    </div>
+    </div> -->
 
    
 

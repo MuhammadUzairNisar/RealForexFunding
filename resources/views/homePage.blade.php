@@ -372,7 +372,9 @@ font-size: 16px;
 .second .hero-description-bk {
   background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
 }
-
+.third .hero-description-bk {
+  background-image: linear-gradient(-20deg , #1353e8, #56a0f0)
+}
 .hero-logo {
   height: 80px;
   width: 80px;
@@ -1112,11 +1114,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   </center>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-<div class="btn">
-  <a href="https://www.linkedin.com/in/florin-cornea-b5118057/" target="_blank">
-    <i class="fab fa-linkedin"></i>
-  </a>
-</div>
+
 
 <div class="first hero">
   <img class="hero-profile-img" src="https://images.unsplash.com/photo-1642790261487-5b7e444c0dce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1429&q=80" alt="">
@@ -1153,6 +1151,24 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   </div>
 </div>
 
+<div class="third hero">
+  <img class="hero-profile-img" src="https://images.unsplash.com/photo-1639803812188-ace8ef36f8b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/3310/3310653.png" alt="">
+  </div>
+  <div class="hero-description">
+    <p>I have managed how to manage risk.
+                 </p>
+  </div>
+  <div  class="hero-date">
+    <p>14.07.2023</p>
+  </div>
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+</div>
 
 
 
@@ -1187,9 +1203,8 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   </div>
 </div>
 </div>
-</div>
-</div>
-</div>
+
+
 <div class="container">
 <center><h2 class="card-title">Steps to Funding</h2>  </center>
 <center>
@@ -1289,8 +1304,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
     </div>
     </div>
     </div>
-    </div>
-    </div>
+   
 
 
 <!-- Footer -->
