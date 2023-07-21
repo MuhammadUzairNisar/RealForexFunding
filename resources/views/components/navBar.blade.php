@@ -116,7 +116,7 @@ body, html {
     <a href="#" class="active">
       Home
     </a>
-    <a href="#">
+    <a href="{{url('/whyRff')}}">
       Why RFF
     </a>
     <a href="#">
@@ -125,7 +125,7 @@ body, html {
     <a href="#">
     Affiliate Program
     </a>
-    <a href="#">
+    <a href="{{url('/FAQs')}}">
       FAQs
     </a>
 	<a href="#">

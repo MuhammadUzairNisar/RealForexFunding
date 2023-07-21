@@ -886,8 +886,8 @@ a, a:hover {
   <center>
   <div style="padding: 40px 25px 25px 40px;">
     <div class="card-body">
-      <h5 class="card-title">Rise to the Challenge</h5>
-      <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
+      <h2 class="card-title">Rise to the Challenge</h2>
+      <!-- <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
   <i class="	fas fa-chart-pie" aria-hidden="true"></i>CFDs
 </button>
 <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
@@ -900,7 +900,7 @@ a, a:hover {
   <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
 </button>
 <br>
-<br>
+<br> -->
 <div style="padding: 40px 25px 25px 25px;">
 
 
