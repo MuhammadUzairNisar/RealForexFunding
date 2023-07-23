@@ -128,9 +128,9 @@ body, html {
     <a href="{{url('/FAQs')}}">
       FAQs
     </a>
-	<a href="#">
+	<!-- <a href="#">
       Contact
-    </a>
+    </a> -->
   </div>
   <div class="navbar-right">
     <a href="javascript:void(0);" class="icon" onclick="showMenu()">
