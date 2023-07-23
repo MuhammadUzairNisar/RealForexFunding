@@ -1,4 +1,4 @@
-@include('bootStrap')
+
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;900&display=swap");
 
@@ -138,34 +138,21 @@ body {
 }
 
 </style>
-<h2>Frequently Asked Questions</h2>
 
-<div style="visibility: hidden; position: absolute; width: 0px; height: 0px;">
-  <svg xmlns="http://www.w3.org/2000/svg">
-    <symbol viewBox="0 0 24 24" id="expand-more">
-      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
-    </symbol>
-    <symbol viewBox="0 0 24 24" id="close">
-      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
-    </symbol>
-  </svg>
-</div>
+<div class="box-content-colapse">
+	<div class="intro-colapse">
+		<span class="caption primary-medium-color">check our faq</span>
+		<h4 class="title">
+			Still have a question?
+		</h4>
+	</div>
+  @foreach ($data as $item)
 
-
-  
-@foreach ($data as $item)
-<details>
-  <summary>
+	<details class="details-comp">
+		<summary class="summary-colapse">
     {{ $item->question }}
-    <svg class="control-icon control-icon-expand" width="24" height="24" role="presentation">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#expand-more" />
-    </svg>
-    <svg class="control-icon control-icon-close" width="24" height="24" role="presentation">
-      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close" />
-    </svg>
-  </summary>
-  <p>{{ $item->answer }}</p>
-</details>
-@endforeach
-
+		</summary>
+    <p>{{ $item->answer }}</p>
+	</details>
+  @endforeach
 </div>
