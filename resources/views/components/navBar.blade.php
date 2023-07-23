@@ -119,10 +119,10 @@ body, html {
     <a href="{{url('/whyRff')}}">
       Why RFF
     </a>
-    <a href="#">
+    <a href="{{url('/tradingRules')}}">
     Trading Rules
     </a>
-    <a href="#">
+    <a href="{{url('/affiliatedPrograms')}}">
     Affiliate Program
     </a>
     <a href="{{url('/FAQs')}}">

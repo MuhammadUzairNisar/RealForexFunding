@@ -143,7 +143,7 @@ body, html {
   <div class="slide-item bgimg" style="background-image: url('https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1230&q=80');">
     <div class="caption">
       <h6>
-      BE YOUR OWN HERO!
+      REAL FUNDS FOR REAL TRADERS
       </h6>
       <p>
       Unleash the power of trading with our user-friendly platform and seize every opportunity in the market

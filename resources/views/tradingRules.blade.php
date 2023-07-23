@@ -1,4 +1,4 @@
-@include('bootStrap')
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
@@ -45,7 +45,7 @@ nav .menu{
 }
 .menu ul li a{
   text-decoration: none;
-  color: #fff;
+  color: white;
   font-size: 18px;
   font-weight: 500;
   padding: 8px 15px;
@@ -357,7 +357,7 @@ margin:0% 3%;
 </ul>
 </div>
 
-<div class="row1">
+<div class="row">
 Copyright © 2023 Real Forex Funds - All Rights Reserved.
 </div>
 </div>
