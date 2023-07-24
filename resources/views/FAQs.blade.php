@@ -141,7 +141,9 @@ body {
 
 <div class="box-content-colapse">
 	<div class="intro-colapse">
-		<span class="caption primary-medium-color">check our faq</span>
+		<h1>
+		Frequently Asked Question(FAQss)
+		</h1>
 		<h4 class="title">
 			Still have a question?
 		</h4>

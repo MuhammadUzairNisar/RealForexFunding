@@ -138,5 +138,4 @@ body, html {
     </a>
   </div>
 </div>
-@include('.components.slideshow')
 
