@@ -18,10 +18,10 @@ use App\Http\Controllers\AffiliatedProgramsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/homePage',[HomeController::class,'homePage'])->name('HomePage');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/',[HomeController::class,'homePage'])->name('HomePage');
 Route::get('/adminPanel',[AdminController::class,'adminPanel'])->name('AdminPanel');
 Route::get('/whyRff',[WhyRffController::class,'whyRff'])->name('WhyRff');
 Route::get('/FAQs',[FAQsController::class,'faqs'])->name('FAQS');
