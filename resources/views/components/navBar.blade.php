@@ -3,9 +3,9 @@
 <style>
 
 header {
-  padding: 20px 0;
+  padding: 30px 0;
   background: white;
-  border-radius: 30px;
+  border-radius: 0 0 30px 30px;
   box-shadow: 0 4px 6px rgba(0,0,0,.2);  
 }
 .container2 {
@@ -15,7 +15,7 @@ header {
 }
 .logo-box {
   float: left;
-  margin-right: 10px;
+  margin-right: 2px;
 }
 .logo-box a {
   outline: none;
@@ -29,7 +29,7 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  float: right;
+  float: left;
 }
 nav li {
   display: inline-block;
@@ -78,6 +78,7 @@ nav li {
 nav li:hover {background: rgba(250,182,127);}
 nav a:after {content: none;}
 }
+h10 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 16px; font-weight: 800; }
 </style>
 <header>
   <div class="container2">
@@ -88,11 +89,11 @@ nav a:after {content: none;}
     </div>
     <nav>
     <ul>
-      <li><a href="">home</a></li>
-      <li><a href="">why rff</a></li>
-      <li><a href="">affiliated programs</a></li>
-      <li><a href="">trading rules</a></li>
-      <li><a href="">faqs</a></li>
+      <li><a href=""><h10>home</h6></a></li>
+      <li><a href=""><h10>why rff</h6></a></li>
+      <li><a href=""><h10>affiliated programs</h6></a></li>
+      <li><a href=""><h10>trading rules</h6></a></li>
+      <li><a href=""><h10>faqs</h6></a></li>
    </ul>
   </nav>
   </div>

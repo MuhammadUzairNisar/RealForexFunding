@@ -628,6 +628,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
     </div>
   </div>
   </div>
+  
   <div style="padding: 40px 25px 25px 25px;">
   <h5>Steps to Funding</h5>
   <div style="padding: 40px 25px 25px 25px;">
