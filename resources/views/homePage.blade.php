@@ -381,6 +381,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/hero-side-video-en-us-hq.mp4">
 
 <div style="background-color:lightgray;">
 <center>
+<div style="padding: 80px 25px 25px 25px;">
 <div class="card" style="margin-top: 50px; border-radius: 20px;">
   <div style="padding: 50px 25px 25px 25px;">
   <div class="container">
@@ -539,7 +540,7 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
     </div>
   </div>
   </div>
-
+  </div>
   <div style="padding: 50px 25px 25px 25px;">
   <div class="container-1">
   <div style="padding: 25px 25px 25px 25px;">
