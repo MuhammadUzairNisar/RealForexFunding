@@ -3,7 +3,7 @@
   <!-- Footer -->
   <footer
           class="text-center text-lg-start text-white"
-          style="background-color: black"
+          style="background-color: #2C0133"
           >
     <!-- Grid container -->
     <div class="container p-4 pb-0">
@@ -13,14 +13,14 @@
         <div class="row">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
+            <h4 class="text-uppercase mb-4 font-weight-bold">
               Real Forex Funds
-            </h6>
-            <p>
+            </h4>
+            <p1>
               Here you can use rows and columns to organize your footer
               content. Lorem ipsum dolor sit amet, consectetur adipisicing
               elit.
-            </p>
+            </p1>
           </div>
           <!-- Grid column -->
 
@@ -28,19 +28,19 @@
 
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-            <p>
+            <h4 class="text-uppercase mb-4 font-weight-bold">Products</h4>
+            <p1>
               <a class="text-white">MDBootstrap</a>
-            </p>
-            <p>
+            </p1>
+            <p1>
               <a class="text-white">MDWordPress</a>
-            </p>
-            <p>
+            </p1>
+            <p1>
               <a class="text-white">BrandFlow</a>
-            </p>
-            <p>
+            </p1>
+            <p1>
               <a class="text-white">Bootstrap Angular</a>
-            </p>
+            </p1>
           </div>
           <!-- Grid column -->
 
@@ -51,17 +51,20 @@
 
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-            <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+            <h4 class="text-uppercase mb-4 font-weight-bold">Contact</h4>
+            <p1><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p1>
+            <br>
+            <p1><i class="fas fa-envelope mr-3"></i> info@gmail.com</p1>
+            <br>
+            <p1><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p1>
+          <br>
+            <p1><i class="fas fa-print mr-3"></i> + 01 234 567 89</p1>
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+            <h4 class="text-uppercase mb-4 font-weight-bold">Follow us</h4>
 
             <!-- Facebook -->
             <a
@@ -126,11 +129,11 @@
     <!-- Copyright -->
     <div
          class="text-center p-3"
-         style="background-color: #212121"
+         style="background-color: #2C0133"
          >
-      © 2020 Copyright:
+      © 2023 Copyright:
       <a class="text-white" href="https://mdbootstrap.com/"
-         >MDBootstrap.com</a
+         >Real Forex Funds</a
         >
     </div>
     <!-- Copyright -->

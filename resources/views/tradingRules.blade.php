@@ -1,4 +1,4 @@
-
+@include('bootStrap')
 <style>
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
@@ -173,7 +173,35 @@ p {
 .blue { color: #1E88E5; }
 .green { color: #00C853; }
 
+@media (max-width: 767px) {
+  .card {
+  width: 200px;
+  height: 320px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 hsla(0,0%,0%,0.2);
+  border-radius: 10px;
+  padding: 10px 0 0 20px ;
+  position: relative;
+  overflow: hidden;
+}
 
+h5 {
+  margin-bottom: 5px;
+}
+
+p {
+  font-size: 45%;
+  color: rgba(0,0,0,0.5);
+  max-width: 100px;
+}
+
+.icon {
+  width: 15%;
+  height: auto;
+  position: absolute;
+  left: -35px;
+}
+}
 
 </style>
 
@@ -203,7 +231,7 @@ p {
       <button>Subscribe</button>
     </div>
   </div>
-
+<div class="container-1">
   <div class="wrapper">
   <div class="card">
     <img class="icon" src="https://static.vecteezy.com/system/resources/previews/011/031/597/original/stock-exchange-and-trading-icon-design-element-png.png">
@@ -271,7 +299,7 @@ All positions must be closed 15 minutes before the market closes on weekends.vio
     <p>Yes! You can trade during the news without restrictions.</p>
   </div>
   </div>
-
+  </div>
 
 
 

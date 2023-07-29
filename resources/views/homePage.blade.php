@@ -1,242 +1,116 @@
-@include('.components.navBar')
-@include('.components.slideShow')
+@include('bootStrap')
+
 <style>
-    body {
-      background-color: #f2f2f2;
+h1 { color: #B67FFA; font-family: 'Raleway',
+sans-serif; font-size: 40px; font-weight: 800; line-height: 50px; margin: 0 15 0px;
+  text-transform: uppercase; }
+
+ h2 { color: black; font-family: 'Raleway',sans-serif;
+  font-size: 40px; font-weight: 800; line-height: 15px; margin: 0  15px;  }
+
+  h3 { color: black; font-family: 'Raleway',
+sans-serif; font-size: 30px; font-weight: 800; line-height: 50px; margin: 0 0 0px;
+  text-transform: uppercase; }
+
+  h4 { color: #ffffff; font-family: 'Raleway',sans-serif; font-size: 25px; font-weight: 800; line-height: 
+    36px; margin: 24 0 24px; text-align: center; }
+
+ h5 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 43px; font-weight: 800;
+       line-height: 72px; margin: 0 0 24px; text-align: center; }
+
+h6 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 20px; font-weight: 800; line-height: 
+    36px; margin: 24 0 24px; }
+    h7 { color: #BF40BF; font-family: 'Raleway',sans-serif; font-size: 15px; font-weight: 800; line-height: 
+    10px; margin: 15 0 15px; }
+    
+
+  p { color: black; font-family:
+   'Lucida Sans', Arial, sans-serif; font-size: 25px; line-height: 26px; text-indent: 0px; margin: 0 15 0px; }
+   p2 { color: #B67FFA; font-family: 'Raleway',sans-serif; font-size: 18px;
+     font-weight: 700; line-height: 32px; margin: 0 0 24px; }
+     p3 { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 
+      18px; font-weight: 500; line-height: 32px; margin: 0 24 24px; }
+   video {
+    float: right;
+  
+}
+
+/* button */
+.glow-on-hover {
+    width: 180px;
+    height: 50px;
+    margin: 15px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.video {
+      flex: 1;
+      padding: 1px;
     }
-    .card-title{
-        font-size : 1.875rem;
-        line-height: 2.25rem;
-        font-weight: bold;
+    video {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-    .custom-button {
-    width: 160px;
-    margin-left: 10px;
-  }
 
- 
-.card1{
+    .card3{
   position: relative;
-  max-width: 260px;
+  max-width: 400px;
   height: auto;
-  background: linear-gradient(-45deg,#fe0847,#feae3f);
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
-          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
--webkit-transition: .5s;
-transition: .5s;
-}
-.card1:hover{
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.col-sm-4:nth-child(1) .card1 ,
-.col-sm-4:nth-child(1) .card1 .title .fa{
-  background: linear-gradient(-45deg,#f403d1,#64b5f6);
- 
-}
-.col-sm-4:nth-child(2) .card1,
-.col-sm-4:nth-child(2) .card1 .title .fa{
-  background: linear-gradient(-45deg,#ffec61,#f321d7);
- 
-}
-.col-sm-4:nth-child(3) .card1,
-.col-sm-4:nth-child(3) .card1 .title .fa{
-  background: linear-gradient(-45deg,#24ff72,#9a4eff);
- 
-}
-.card1::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: rgba(255, 255, 255, .1);
-z-index: 1;
--webkit-transform: skewY(-5deg) scale(1.5);
-        transform: skewY(-5deg) scale(1.5);
-}
-.title .fa{
-  color:#fff;
-  font-size: 60px;
-  width: 100px;
-  height: 100px;
-  border-radius:  50%;
-  text-align: center;
-  line-height: 100px;
-  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
-          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
- 
-}
-.title h2 {
-  position: relative;
-  margin: 20px  0 0;
-  padding: 0;
-  color: #fff;
-  font-size: 28px;
- z-index: 2;
-}
-.price,.option{
-  position: relative;
-  z-index: 2;
-}
-.price h4 {
-margin: 0;
-padding: 20px 0 ;
-color: #fff;
-font-size: 60px;
-}
-.option ul {
-  margin: 0;
-  padding: 0;
- 
-}
-.option ul li {
-margin: 0 0 10px;
-padding: 0;
-list-style: none;
-color: #fff;
-font-size: 16px;
-}
-.card1 a {
-  position: relative;
-  z-index: 2;
-  background: #fff;
-  color : black;
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 40px;
-  display: block;
-  text-align: center;
-  margin: 20px auto 0 ;
-  font-size: 16px;
-  cursor: pointer;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
- 
-}
-.card1 a:hover{
-    text-decoration: none;
-}
-
-.card2{
-  position: relative;
-  max-width: 260px;
-  height: auto;
-  background: linear-gradient(-45deg,#fe0847,#feae3f);
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
-          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
--webkit-transition: .5s;
-transition: .5s;
-}
-.card2:hover{
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-.col-sm-4:nth-child(1) .card1 ,
-.col-sm-4:nth-child(1) .card1 .title .fa{
-  background: linear-gradient(-45deg,#f403d1,#64b5f6);
- 
-}
-.col-sm-4:nth-child(2) .card1,
-.col-sm-4:nth-child(2) .card1 .title .fa{
-  background: linear-gradient(-45deg,#ffec61,#f321d7);
- 
-}
-.col-sm-4:nth-child(3) .card1,
-.col-sm-4:nth-child(3) .card1 .title .fa{
-  background: linear-gradient(-45deg,#24ff72,#9a4eff);
- 
-}
-.card2::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: rgba(255, 255, 255, .1);
-z-index: 1;
--webkit-transform: skewY(-5deg) scale(1.5);
-        transform: skewY(-5deg) scale(1.5);
-}
-.title .fa{
-  color:#fff;
-  font-size: 60px;
-  width: 100px;
-  height: 100px;
-  border-radius:  50%;
-  text-align: center;
-  line-height: 100px;
-  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
-          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
- 
-}
-.title h2 {
-  position: relative;
-  margin: 20px  0 0;
-  padding: 0;
-  color: #fff;
-  font-size: 28px;
- z-index: 2;
-}
-.price,.option{
-  position: relative;
-  z-index: 2;
-}
-.price h4 {
-margin: 0;
-padding: 20px 0 ;
-color: #fff;
-font-size: 60px;
-}
-.option ul {
-  margin: 0;
-  padding: 0;
- 
-}
-.option ul li {
-margin: 0 0 10px;
-padding: 0;
-list-style: none;
-color: #fff;
-font-size: 16px;
-}
-.card2 a {
-  position: relative;
-  z-index: 2;
-  background: #fff;
-  color : black;
-  width: 150px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 40px;
-  display: block;
-  text-align: center;
-  margin: 20px auto 0 ;
-  font-size: 16px;
-  cursor: pointer;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
- 
-}
-.card2 a:hover{
-    text-decoration: none;
-}
-
-
-.card3{
-  position: relative;
-  max-width: 360px;
-  height: auto;
-  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  background: white;
   border-radius: 15px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -251,17 +125,17 @@ transition: .5s;
 }
 .col-sm-4:nth-child(1) .card3 ,
 .col-sm-4:nth-child(1) .card1 .title .fa{
-  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+  background:white;
  
 }
 .col-sm-4:nth-child(2) .card3,
 .col-sm-4:nth-child(2) .card3 .title .fa{
-  background: linear-gradient(-45deg,#ffec61,#f321d7);
+  
  
 }
 .col-sm-4:nth-child(3) .card3,
 .col-sm-4:nth-child(3) .card3 .title .fa{
-  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+  
  
 }
 .card3::before{
@@ -276,23 +150,11 @@ z-index: 1;
 -webkit-transform: skewY(-5deg) scale(1.5);
         transform: skewY(-5deg) scale(1.5);
 }
-.title .fa{
-  color:#fff;
-  font-size: 60px;
-  width: 100px;
-  height: 100px;
-  border-radius:  50%;
-  text-align: center;
-  line-height: 100px;
-  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
-          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
- 
-}
 .title h2 {
   position: relative;
   margin: 20px  0 0;
   padding: 0;
-  color: #fff;
+  color: blck;
   font-size: 28px;
  z-index: 2;
 }
@@ -303,7 +165,7 @@ z-index: 1;
 .price h4 {
 margin: 0;
 padding: 20px 0 ;
-color: #fff;
+color: #B67FFA;
 font-size: 60px;
 }
 .option ul {
@@ -315,7 +177,7 @@ font-size: 60px;
 margin: 0 0 10px;
 padding: 0;
 list-style: none;
-color: #fff;
+color: black;
 font-size: 16px;
 }
 .card3 a {
@@ -332,624 +194,263 @@ font-size: 16px;
   margin: 20px auto 0 ;
   font-size: 16px;
   cursor: pointer;
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
  
 }
 .card3 a:hover{
     text-decoration: none;
 }
-
-
-
-/* BEGIN CARD DESIGN */
-.hero {
-  display: inline-block;
-  position: relative;
-  width: 400px;
-  min-width: 400px;
-  height: 400px;
-  border-radius: 30px;
-  overflow:hidden;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-  margin: 30px;
-}
-
-.hero-profile-img {
-  height: 70%;
-}
-
-.hero-description-bk {
-  background-image: linear-gradient(0deg , #3f5efb, #fc466b);
-  border-radius: 30px;
-  position: absolute;
-  top: 55%;
-  left: -5px;
-  height: 65%;
-  width: 108%;
-  transform: skew(19deg, -9deg);
-}
-
-.second .hero-description-bk {
-  background-image: linear-gradient(-20deg , #bb7413, #e7d25c)
-}
-.third .hero-description-bk {
-  background-image: linear-gradient(-20deg , #1353e8, #56a0f0)
-}
-.hero-logo {
-  height: 80px;
-  width: 80px;
-  border-radius: 20px;
-  background-color: #fff;
-  position: absolute;
-  bottom: 30%;
-  left: 30px;
-  overflow:hidden;
-  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
-}
-
-.hero-logo img {
+.wrap {
   height: 100%;
-}
-
-.hero-description {
-  position: absolute;
-  color: #fff;
-  font-weight: 900;
-  left: 150px;
-  bottom: 26%;
-}
-
-.hero-btn {
-  position: absolute;
-  color: #fff;
-  right: 30px;
-  bottom: 10%;
-  padding: 10px 20px;
-  border: 1px solid #fff;
-}
-
-.hero-btn a {
-  color: #fff;
-}
-
-.hero-date {
-  position: absolute;
-  color: #fff;
-  left: 30px;
-  bottom: 10%;
-}
-/* END CARD DESIGN */
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  background-color: #eee;
-  min-height: 100vh;
-}
-/* .btn i:before {
-  width: 14px;
-  height: 14px;
-  position: fixed;
-  color: #fff;
-  background: #0077B5;
-  padding: 10px;
-  border-radius: 50%;
-  top:5px;
-  right:5px;
-} */
-
-
-
-.dark {
-	background: #110f16;
-}
-
-
-.light {
-	background: #f3f5f7;
-}
-
-a, a:hover {
-	text-decoration: none;
-	transition: color 0.3s ease-in-out;
-}
-
-#pageHeaderTitle {
-	margin: 2rem 0;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 2.5rem;
-}
-
-/* Cards */
-.postcard {
-  flex-wrap: wrap;
   display: flex;
-  
-  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
-  border-radius: 10px;
-  margin: 0 0 2rem 0;
-  overflow: hidden;
-  position: relative;
-  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
 
-	&.dark {
-		background-color: #18151f;
-	}
-	&.light {
-		background-color: #e1e5ea;
-	}
-	
-	.t-dark {
-		color: #18151f;
-	}
-	
-  a {
-    color: inherit;
-  }
-	
-	h1,	.h1 {
-		margin-bottom: 0.5rem;
-		font-weight: 500;
-		line-height: 1.2;
-	}
-	
-	.small {
-		font-size: 80%;
-	}
-
-  .postcard__title {
-    font-size: 1.75rem;
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 6px 12px rgba(174,4,204);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
   }
 
-  .postcard__img {
-    max-height: 180px;
-    width: 100%;
-    object-fit: cover;
-    position: relative;
-  }
+.button:hover {
+  background-color: #AE04CC;
+  box-shadow: 0px 10px 15px rgba(174,4,204);
+  color: #fff;
+  transform: translateY(-7px);
+}
+img {
+  display: block;
+  margin: left;
+  width: 75%;
+}
+.container-1 {
+  display: block;
+  margin: left;
 
-  .postcard__img_link {
-    display: contents;
-  }
+}
+.card-1{
+  display: block;
+  margin: right;
 
-  .postcard__bar {
-    width: 50px;
-    height: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    background-color: #424242;
-    transition: width 0.2s ease;
-  }
+}
 
-  .postcard__text {
-    padding: 1.5rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .postcard__preview-txt {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: justify;
-    height: 100%;
-  }
-
-  .postcard__tagbox {
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 14px;
-    margin: 20px 0 0 0;
-		padding: 0;
-    justify-content: center;
-
-    .tag__item {
-      display: inline-block;
-      background: rgba(83, 83, 83, 0.4);
-      border-radius: 3px;
-      padding: 2.5px 10px;
-      margin: 0 5px 5px 0;
-      cursor: default;
-      user-select: none;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background: rgba(83, 83, 83, 0.8);
-      }
+    /* Optional: Add some styling to the images and container */
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      
     }
-  }
+    
+    .image-container img {
+      max-width: 45%; /* Adjust this value as needed */
+      height: auto;
+      border-radius: 4%;
+    }
 
-  &:before {
-    content: "";
+    
+    @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+  
+  ol {
+    max-width: 350px;
+    counter-reset: my-awesome-counter;
+    list-style: none;
+    padding-left: 40px;
+  }
+  ol li {
+    margin: 0 0 0.5rem 0;
+    counter-increment: my-awesome-counter;
+    position: relative;
+  }
+  ol li::before {
+    content: counter(my-awesome-counter);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
     position: absolute;
+    --size: 32px;
+    left: calc(-1 * var(--size) - 10px);
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
     top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(-70deg, #424242, transparent 50%);
-    opacity: 1;
-    border-radius: 10px;
-  }
-
-  &:hover .postcard__bar {
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .postcard {
-    flex-wrap: inherit;
-
-    .postcard__title {
-      font-size: 2rem;
-    }
-
-    .postcard__tagbox {
-      justify-content: start;
-    }
-
-    .postcard__img {
-      max-width: 300px;
-      max-height: 100%;
-      transition: transform 0.3s ease;
-    }
-
-    .postcard__text {
-      padding: 3rem;
-      width: 100%;
-    }
-
-    .media.postcard__text:before {
-      content: "";
-      position: absolute;
-      display: block;
-      background: #18151f;
-      top: -20%;
-      height: 130%;
-      width: 55px;
-    }
-
-    &:hover .postcard__img {
-      transform: scale(1.1);
-    }
-
-    &:nth-child(2n+1) {
-      flex-direction: row;
-    }
-
-    &:nth-child(2n+0) {
-      flex-direction: row-reverse;
-    }
-
-    &:nth-child(2n+1) .postcard__text::before {
-      left: -12px !important;
-      transform: rotate(4deg);
-    }
-
-    &:nth-child(2n+0) .postcard__text::before {
-      right: -12px !important;
-      transform: rotate(-4deg);
-    }
-  }
-}
-@media screen and (min-width: 1024px){
-		.postcard__text {
-      padding: 2rem 3.5rem;
-    }
-		
-		.postcard__text:before {
-      content: "";
-      position: absolute;
-      display: block;
-      
-      top: -20%;
-      height: 130%;
-      width: 55px;
-    }
-	
-  .postcard.dark {
-		.postcard__text:before {
-			background: #18151f;
-		}
-  }
-	.postcard.light {
-		.postcard__text:before {
-			background: #e1e5ea;
-		}
-  }
-}
-
-/* COLORS */
-.postcard .postcard__tagbox .green.play:hover {
-	background: $main-green;
-	color: black;
-}
-.green .postcard__title:hover {
-	color: $main-green;
-}
-.green .postcard__bar {
-	background-color: $main-green;
-}
-.green::before {
-	background-image: linear-gradient(
-		-30deg,
-		$main-green-rgb-015,
-		transparent 50%
-	);
-}
-.green:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, $main-green-rgb-015, transparent 50%);
-}
-
-.postcard .postcard__tagbox .blue.play:hover {
-	background: $main-blue;
-}
-.blue .postcard__title:hover {
-	color: $main-blue;
-}
-.blue .postcard__bar {
-	background-color: $main-blue;
-}
-.blue::before {
-	background-image: linear-gradient(-30deg, $main-blue-rgb-015, transparent 50%);
-}
-.blue:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, $main-blue-rgb-015, transparent 50%);
-}
-
-.postcard .postcard__tagbox .red.play:hover {
-	background: $main-red;
-}
-.red .postcard__title:hover {
-	color: $main-red;
-}
-.red .postcard__bar {
-	background-color: $main-red;
-}
-.red::before {
-	background-image: linear-gradient(-30deg, $main-red-rgb-015, transparent 50%);
-}
-.red:nth-child(2n)::before {
-	background-image: linear-gradient(30deg, $main-red-rgb-015, transparent 50%);
-}
-
-.postcard .postcard__tagbox .yellow.play:hover {
-	background: $main-yellow;
-	color: black;
-}
-.yellow .postcard__title:hover {
-	color: $main-yellow;
-}
-.yellow .postcard__bar {
-	background-color: $main-yellow;
-}
-.yellow::before {
-	background-image: linear-gradient(
-		-30deg,
-		$main-yellow-rgb-015,
-		transparent 50%
-	);
-}
-.yellow:nth-child(2n)::before {
-	background-image: linear-gradient(
-		30deg,
-		$main-yellow-rgb-015,
-		transparent 50%
-	);
-}
-
-@media screen and (min-width: 769px) {
-	.green::before {
-		background-image: linear-gradient(
-			-80deg,
-			$main-green-rgb-015,
-			transparent 50%
-		);
-	}
-	.green:nth-child(2n)::before {
-		background-image: linear-gradient(
-			80deg,
-			$main-green-rgb-015,
-			transparent 50%
-		);
-	}
-
-	.blue::before {
-		background-image: linear-gradient(
-			-80deg,
-			$main-blue-rgb-015,
-			transparent 50%
-		);
-	}
-	.blue:nth-child(2n)::before {
-		background-image: linear-gradient(80deg, $main-blue-rgb-015, transparent 50%);
-	}
-
-	.red::before {
-		background-image: linear-gradient(-80deg, $main-red-rgb-015, transparent 50%);
-	}
-	.red:nth-child(2n)::before {
-		background-image: linear-gradient(80deg, $main-red-rgb-015, transparent 50%);
-	}
-	
-	.yellow::before {
-		background-image: linear-gradient(
-			-80deg,
-			$main-yellow-rgb-015,
-			transparent 50%
-		);
-	}
-	.yellow:nth-child(2n)::before {
-		background-image: linear-gradient(
-			80deg,
-			$main-yellow-rgb-015,
-			transparent 50%
-		);
-	}
-}
-
-
-/* .card-container{
-  display: flex; */
-  
-  .card5{
-    margin: 20px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    overflow: hidden;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    
-    .card-count-container{
-      display: flex;
-      align-items: center;
-      width: 100%;
-      height: 200px;
-      padding: 20px 0px;
-    }
-    
-    .card-count{
-      font-weight: bold;
-      font-size: 100px;
-      width: 150px;
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      margin: auto;
-      margin-right: -50px;
-      padding-right: 25px;
-      overflow: hidden;
-      color: #ffffff;
-      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-      transition: all 0.2s ease-in-out;
-    }
-    
-    .card-content{
-      padding: 20px;
-      padding-top: 0px;
-      
-      > h2{
-        margin-top: 0px;
-        text-align: center;
-      }
-    }
-    
-    .card-footer{
-      padding: 20px;
-      color: #ffffff;
-    }
-    
-    &:nth-child(1){
-      .card-count, .card-footer{
-        background-image: linear-gradient(90deg, #f6671f, #c01b1c);
-      }
-    }
-    
-    &:nth-child(2){
-      .card-count, .card-footer{
-        background-image: linear-gradient(90deg, #fec22f, #ea9826);
-      }
-    }
-    
-    &:nth-child(3){
-      .card-count, .card-footer{
-        background-image: linear-gradient(90deg, #6fc6a9, #058ba9);
-      }
-    }
-    
-    &:hover{
-      .card-count{
-        width: 160px;
-        height: 160px;
-      }
-    }
+    transform: rotate(-10deg);
+    background: #BF40BF;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 1px 1px 0 #999;
   }
   
-  media (max-width: 767px){
-    flex-wrap: wrap;
-  }
-
-
-  </style>
-
-
-
+#checkmark
+{
+    transform: rotate(45deg);
+    height: 25px;
+    width: 14px;
     
+    border-bottom: 5px solid purple;
+    border-right: 5px solid purple;
+}
 
 
 
-<div style="padding: 40px 25px 25px 40px;">
-  <div class="card" style="margin-top: 50px; border-radius: 50px;">
-  <center>
+   
+</style>
+
+
+<div style="padding: 120px 25px 25px 25px;">
+</div>
+<div class="row">
+  <div class="col-md-6 ">
+    <div>
+  <h2>We Fund,</h2>
+  <br>
+  <h2>You Trade!</h2>
+  <br>
+    <h1>BE YOUR OWN HERO</h1>
+    <br>
+    <p>$5M funding and up to 80% profit share</p>
+    <br>
+    
+    <button class="glow-on-hover" type="button">Get Started</button>                              
+                           
+    </div>
+  </div>
+  
+  <div class="col-md-6 ">
+    <div>
+    <video width="600" height="800" autoplay="" loop="" muted="" 
+src="https://cdn.thetradingpit.com/pages/homepage/hero-side-video-en-us-hq.mp4">
+</video>
+
+      
+    </div>
+    </div>
+    </div>
+    
+  
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR/USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+</div>
+
+<div style="background-color:lightgray;">
+<center>
+<div class="card" style="margin-top: 50px; border-radius: 20px;">
+  <div style="padding: 50px 25px 25px 25px;">
+  <div class="container">
+  <div class="lg:max-w-2xl lg:pl-16">
   <div style="padding: 40px 25px 25px 40px;">
-    <div class="card-body">
+   
       <h2 class="card-title">Rise to the Challenge</h2>
-      <!-- <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="	fas fa-chart-pie" aria-hidden="true"></i>CFDs
-</button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-file-signature" aria-hidden="true"></i>FUTURES
-</button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fab fa-btc" aria-hidden="true"></i>CRYPTOS
-</button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
-</button>
-<br>
-<br> -->
-<div style="padding: 40px 25px 25px 25px;">
-
-
-<section>
+      <br>
+      <p2>THE POWER OF MULTI-ASSET TRADING</p2>
+      <div style="padding: 40px 25px 25px 40px;">
+  
+      
   <div class="container-fluid">
     <div class="container">
       <div class="row">
       <div class="col-sm-4">
           <div class="card3">
             <div class="title">
-              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              
               <h2>LITE</h2>
             </div>
             <div class="price">
               <h4><sup>$</sup>99</h4>
             </div>
+            <button class="glow-on-hover" type="button">BUY NOW</button> 
+            <br>
             <div class="option">
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
+    <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p1>
     <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <p class="card-text">One-Time Payment Only</p>
+    <p1 class="card-text">One-Time Payment Only</p1>
+    <br>
     <b>Profit Target</b>
-    <p class="card-text">$1,000 (10%)</p>
+    <br>
+    <p1 class="card-text">$1,000 (10%)</p1>
+    <br>
     <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
+    <br>
+    <p1 class="card-text">90 Days</p1>
+    <br>
             </div>
-            <a href="#">Buy Now </a>
+           
           </div>
         </div>
 
         <div class="col-sm-4">
           <div class="card3">
             <div class="title">
-              <i class="fa fa-plane" aria-hidden="true"></i>
+              
               <h2>STANDARD</h2>
             </div>
             <div class="price">
               <h4><sup>$</sup>179</h4>
+              <button class="glow-on-hover" type="button">BUY NOW</button> 
+            <br>
             </div>
             <div class="option">
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
+    <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p1>
     <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <p class="card-text">One-Time Payment Only</p>
+    <p1 class="card-text">One-Time Payment Only</p1>
+    <br>
     <b>Profit Target</b>
-    <p class="card-text">$2,000 (10%)</p>
+    <br>
+    <p1 class="card-text">$2,000 (10%)</p1>
+    <br>
     <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
+    <br>
+    <p1 class="card-text">90 Days</p1>
+    <br>
             </div>
-            <a href="#">Buy Now </a>
+           
           </div>
         </div>
   
@@ -958,353 +459,231 @@ a, a:hover {
         <div class="col-sm-4">
           <div class="card3">
             <div class="title">
-              <i class="fa fa-rocket" aria-hidden="true"></i>
+             
               <h2>VIP</h2>
             </div>
             <div class="price">
               <h4><sup>$</sup>999</h4>
+              <button class="glow-on-hover" type="button">BUY NOW</button> 
+            <br>
             </div>
             <div class="option">
-    <p class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p>
+    <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p1>
     <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <p class="card-text">One-Time Payment Only</p>
+    <p1 class="card-text">One-Time Payment Only</p1>
+    <br>
     <b>Profit Target</b>
-    <p class="card-text">$8,000 (8%)</p>
+    <br>
+    <p1 class="card-text">$8,000 (8%)</p1>
+    <br>
     <b>Total Challenge Duration</b>
-    <p class="card-text">90 Days</p>
+    <br>
+    <p1 class="card-text">90 Days</p1>
+    <br>
             </div>
-            <a href="#">Buy Now </a>
+            
           </div>
         </div>
+        
   
       </div>
     </div>
-    </div>
-</section>
+    
+
 <div style="padding: 40px 25px 25px 25px;">
-    <center><a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Start</a>
+    <center> <button class="glow-on-hover" type="button">Get Started</button> 
     </center>
   </div>
   </div>
   </div>
   </div>
-    </div>
-
-    <div style="padding: 40px 25px 25px 25px;">
-  <div class="card" style="margin-top: 50px; border-radius: 50px;">
-  <div style="padding: 50px 25px 25px 25px;">
-
+  </div>
+  </div>
+  </div>
+  </div>
+ 
   
-  <div class="container">
-  <div class="lg:max-w-2xl lg:pl-16">
-<h1 class="card-title">The Power of Multi-Asset Trading</h1>
-<div style="padding: 40px 25px 25px 25px;">
-<div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="btn-group-vertical flex-container">
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-chart-pie" aria-hidden="true"></i>CFDs
-</button>
-<br>
-<br>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-file-signature" aria-hidden="true"></i>FUTURES
-</button>
-<br>
-<br>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fab fa-btc" aria-hidden="true"></i>CRYPTOS
-</button>
-<br>
-<br>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
-</button>
-</div>
-      </div>
-      <div class="col-sm-4">
-      <video width="400" height="385"  autoplay="" loop="" muted="" 
-src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
-</video>
-
-<p> Trade currencies on the global Forex CFDs market, which offers plenty of opportunities for those who understand its volatility.</p>
-<section class="section-challenge lg:bg-gray-200">
-<a href="#">Learn more -></a> 
-</div>
-</div>
-    </div>
-  </div>
-</div>
-</div>
-    </div>
-  </div>
-</div>
-
-<section class="section-challenge lg:bg-gray-200">
-<center>
-<div style="padding: 40px 25px 25px 25px;">
-<div class="container">
-  <h1>
-  Get started in 3 steps
-  </h1>
   
-  <img width="750" height="500"class="mt-6" src="https://www.pngall.com/wp-content/uploads/8/Stock-Trading-Transparent.png" alt="">
-  <br>
-  <br>
-  <a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Get Started!</a>
- <center>
-  <div style="padding: 25px 25px 25px 25px;">
+  </section>
 
 
-		
-
-
-	<div class="container py-2">
-	
-
-		<article class="postcard light blue">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://images.unsplash.com/photo-1635501300433-ed4e02fce51c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="Image Title" />
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title blue"><a href="#">CHOOSE A TRADING PROGRAM</a></h1>
-				
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">Choosing a trading program can be a strategic decision for individuals looking to participate in financial markets and achieve their investment goals. Here are several compelling reasons why one might choose a trading program.
-           Trading programs provide individuals with direct access to financial markets that may otherwise be difficult to navigate. They offer the opportunity to trade a wide range of financial instruments such as stocks, bonds, commodities, currencies, and derivatives.</div>
-				
-			</div>
-		</article>
-		<article class="postcard light red">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="Image Title" />	
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title red"><a href="#">PASS THE CHALLENGE</a></h1>
-			
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">"Passing the challenge" in trading refers to successfully meeting specific requirements or criteria set by a trading firm or platform in order to gain access to additional trading capital or advanced features. These challenges are often designed to assess a trader's skills, risk management abilities, and consistency in generating profits. Step up your trading program with simple and clear rules. As you move through your plan’s steps, the possibilities increase.</div>
-				
-			</div>
-		</article>
-		</article>
-		<article class="postcard light red">
-			<a class="postcard__img_link" href="#">
-				<img class="postcard__img" src="https://images.unsplash.com/photo-1645731504636-72725e46b26b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80" alt="Image Title" />	
-			</a>
-			<div class="postcard__text t-dark">
-				<h1 class="postcard__title red"><a href="#">FUNDED PARTNER</a></h1>
-			
-				<div class="postcard__bar"></div>
-				<div class="postcard__preview-txt">"To become a funded trader, you must undergo an evaluation challenge to show trading consistency and risk management qualities.
-        As a funded partner, traders gain access to substantial trading capital provided by the trading firm or platform. This capital allows them to trade with larger sums of money than they may have had access to previously, amplifying their profit potential.
-        </div>
-				
-			</div>
-		</article>
-	</div>
-</section>
-  
-
-    <div style="padding: 25px 25px 25px 25px;">
-    <center>
-      <h1><span style="color: #000000;">How we empower you</span></h1>
-    
-  <!-- <h1 class="card-title">How we empower you</h1> -->
-  </center>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-
-
-<div class="first hero">
-  <img class="hero-profile-img" src="https://images.unsplash.com/photo-1642790261487-5b7e444c0dce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1429&q=80" alt="">
-  <div class="hero-description-bk"></div>
-  <div class="hero-logo">
-    <img src="https://w7.pngwing.com/pngs/384/814/png-transparent-market-market-text-investment-logo.png" alt="">
-  </div>
-  <div class="hero-description">
-    <p>I have managed how to manage risk.
-                 </p>
-  </div>
-  <div  class="hero-date">
-    <p>14.07.2023</p>
-  </div>
-  <div class="hero-btn">
-    <a href="#">Learn More</a>
-  </div>
-</div>
-
-<div class="second hero">
-  <img class="hero-profile-img" src="https://images.unsplash.com/photo-1609554496796-c345a5335ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="">
-  <div class="hero-description-bk"></div>
-  <div class="hero-logo">
-    <img src="https://cdn.pixabay.com/photo/2016/11/10/05/25/bitcoin-1813507_1280.png" alt="">
-  </div>
-  <div class="hero-description">
-    <p>The Trading set-up is truly ingenious.</p>
-  </div>
-  <div  class="hero-date">
-    <p>14.07.2023</p>
-  </div>
-  <div class="hero-btn">
-    <a href="#">Learn More</a>
-  </div>
-</div>
-
-<div class="third hero">
-  <img class="hero-profile-img" src="https://images.unsplash.com/photo-1639803812188-ace8ef36f8b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80" alt="">
-  <div class="hero-description-bk"></div>
-  <div class="hero-logo">
-    <img src="https://cdn-icons-png.flaticon.com/512/3310/3310653.png" alt="">
-  </div>
-  <div class="hero-description">
-    <p>I have managed how to manage risk.
-                 </p>
-  </div>
-  <div  class="hero-date">
-    <p>14.07.2023</p>
-  </div>
-  <div class="hero-btn">
-    <a href="#">Learn More</a>
-  </div>
-</div>
-</div>
-
-
-
-
-<div class="card" style="margin-top: 80px; border-radius: 50px;">
-  <div style="padding: 25px 25px 25px 25px;">
+  <div class="card" style="margin-top: 80px; border-radius: 20px;">
+  <div style="padding: 80px 25px 25px 25px;">
 <div class="row">
-  <div class="col-md-6 col-lg-5 ml-auto d-flex align-items-center mt-4 mt-md-0">
+  <div class="col-md-6  ">
     <div>
   
     
-                                <h5 class="fa fa-check-square">   BUILT FOR YOU</h5>
-                                <p>Challenges, Multi-asset trading, and top-tier brokers adapted to you.</p>
-                            
-                                <h5 class="fa fa-check-square">   FAST PAYOUTS</h5>
-                                <p>Instant withdrawal of profits. Get your money on the spot!</p>
-                            
-                                <h5 class="fa fa-check-square">   DIVERSE LEARNING</h5>
-                                <p>Build your trading skills with targeted resources and experienced mentors.</p>
-                           
-                                <h5 class="fa fa-check-square">   SIMPLE RULES</h5>
-                                <p>Clear steps and criteria. What you see is what you get.</p>
+    <h3 class="card-title">The Power of Multi-Asset Trading</h3>
+      <br>
+        <div class="btn-group-vertical flex-container">
+        <div class="wrap">
+  <button class="button">CFDs</button>
+</div>
+<br>
+<br>
+<div class="wrap">
+  <button class="button">FUTURES</button>
+</div>
+    </div>
+  </div>
+  </div>
+  <div class="col-md-5">
+    <div>
+    <video width="400" height="550"  autoplay="" loop="" muted="" 
+src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
+</video>
+
+    </div>
+  </div>
+    </div>
+  </div>
+  </div>
+
+  <div style="padding: 50px 25px 25px 25px;">
+  <div class="container-1">
+  <div style="padding: 25px 25px 25px 25px;">
+<div class="row">
+<div class="col-md-6">
+    <div>
+    <h3>Get started in 3 steps</h3>
+    <br>
+    <button class="glow-on-hover" type="button">Get Started!</button>
+    <br>
+    <img src="https://cdn.thetradingpit.com/pages/homepage/start-side-image-en-us.png" class="img-fluid" alt="Responsive image">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="card bg-dark text-white" style="margin-top: 40px; border-radius: 10px;">
+    <h4>CHOOSE A TRADING PROGRAM</h4>
+    
+    <p3>
+    To become a funded trader, you must undergo an evaluation challenge
+     to show trading consistency and risk management qualities
+    </p3>
+</div>
+<div class="card bg-dark text-white" style="margin-top: 40px; border-radius: 10px;">
+    <h4>PASS THE CHALLENGE</h4>
+   
+    <p3>
+    Step up your trading program with simple and clear rules. As you move through your plan’s steps,
+     the possibilities increase
+    </p3>
+</div>
+<div class="card bg-dark text-white" style="margin-top: 40px; border-radius: 10px;">
+    <h4>FUNDED PARTNER</h4>
+    
+    <p3>
+    You will become a funded partner of The Trading Pit with $5M in funding to keep up to 80% of your profits.
+     Let’s get started!
+    </p3>
+</div>
+</div>
+</div>
+<div style="padding: 60px 25px 25px 25px;">
+</div>
+<h5>How we empower you</h5>
+<div style="padding: 25px 25px 25px 25px;">
+</div>
+<div class="image-container">
+    <img src="https://cdn.thetradingpit.com/pages/homepage/how-broker-en-us-modified.png" alt="rounded-corner">
+    <img src="https://cdn.thetradingpit.com/pages/homepage/how-trader-en-us-modified.png" alt="rounded-corner">
+  </div>
+  </div>
+  </div>
+  </div>
+  
+
+  <div class="card" style="margin-top: 80px; border-radius: 20px;">
+  <div style="padding: 25px 25px 25px 25px;">
+<div class="row">
+  <div class="col-md-6">
+    <div>
+  
+    
+ <h6>&#10004; BUILT FOR YOU</h6>
+ 
+  <p4>Challenges, Multi-asset trading, and top-tier brokers adapted to you.</p4>
+  
+<h6> &#10004;   FAST PAYOUTS</h6>
+  <p4>Instant withdrawal of profits. Get your money on the spot!</p4>
+  
+  <h6> &#10004;   DIVERSE LEARNING</h6>
+  <p4>Build your trading skills with targeted resources and experienced mentors.</p4>
+  
+ <h6>  &#10004;  DIVERSE LEARNING</h6>
+  <p4>Build your trading skills with targeted resources and experienced mentors.</p4>
+  
+
                            
     </div>
   </div>
   <div class="col-md-6">
     <div>
-      <img alt="Web Studio" class="img-fluid" src="https://img.freepik.com/free-vector/trading-linear-design_1284-36136.jpg?w=996&t=st=1689332736~exp=1689333336~hmac=22c233a9b08373213046a37c7fed603f2584a4c86f88554939e1899af9b169fd">
+      <img alt="Web Studio" class="img-fluid" src="https://cdn.thetradingpit.com/pages/homepage/how-points-card-en-us.png">
     </div>
   </div>
     </div>
   </div>
-</div>
-</div>
-
-
-<div class="container">
-<center><h2 class="card-title">Steps to Funding</h2>  </center>
-<center>
-    <div class="card-body">
-      <button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-chart-pie" aria-hidden="true"></i>CFDs
-</button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-file-signature" aria-hidden="true"></i>FUTURES
-</button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fab fa-btc" aria-hidden="true"></i>CRYPTOS
-</button>
-<button type="button" class="btn btn-outline-primary waves-effect rounded-pill custom-button">
-  <i class="fas fa-chart-line" aria-hidden="true"></i>STOCKS
-</button>
-<div style="padding: 25px 25px 25px 25px;">
-
-
-<div class="card-container">
-  <div class="card5">
-    <div class="card-count-container">
-      <div class="card-count">1</div>
-    </div>
+  </div>
+  <div style="padding: 40px 25px 25px 25px;">
+  <h5>Steps to Funding</h5>
+  <div style="padding: 40px 25px 25px 25px;">
+  <div class="row">
+  <div class="col-md-6">
     
-    <div class="card-content">
-      <h2>CHALLENGE</h2>
-      Simple rules
-      <br>
-      Flexilbe Trading
-      <br>
-      Overnight weekend trades on Forex
-      <br>
-      One-time fee 100% refundable
-    </div>
+
     
-    <div class="card-footer">
-    Choose the program that fits you. The better you become, the more funds you unlock. Grow your account and start earning!
-    </div>
-  </div>
+
+    <div class="container">
+    <img width="80" height="800" src="https://cdn.thetradingpit.com/pages/homepage/journey-side-img.png" >
+    
+    </div></div>
+    <div class="col-md-6">
+    <div>
+
+    <ol>
+    <li><h6>EVALUATION PHASE</h6>
+  <h7>&#10004; Accessible Entry:</h7> Challenges start at just $99.
+  <br>
+  <h7> &#10004;   Streamlined Process:</h7> Simple 1-step challenges available.
+  <br>
+    <h7> &#10004;   Risk-Free Participation: </h7> Full refund promise after Level
+    <br>
+  <h7>  &#10004;  Skill Recognition: </h7> Earn your official TTP Certification.</li>
+
+  <li><h6>TRADING SIGNAL PARTNER</h6>
+    <h7>&#10004; Accessible Entry:</h7> Challenges start at just $99.
+  <br>
+  <h7> &#10004;   Streamlined Process:</h7> Simple 1-step challenges available.
+  <br>
+    <h7> &#10004;   Risk-Free Participation: </h7> Full refund promise after Level
+    <br>
+  <h7>  &#10004;  Skill Recognition: </h7> Earn your official TTP Certification.</li>
+
+  <li>
+    <h6>TRADING PIT CHAMPION</h6>
+    <h7>&#10004; Accessible Entry:</h7> Challenges start at just $99.
+  <br>
+  <h7> &#10004;   Streamlined Process:</h7> Simple 1-step challenges available.
+  <br>
+    <h7> &#10004;   Risk-Free Participation: </h7> Full refund promise after Level
+    <br>
+  <h7>  &#10004;  Skill Recognition: </h7> Earn your official TTP Certification.</li>
+</ol>
   
-  <div class="card5">
-    <div class="card-count-container">
-      <div class="card-count">2</div>
-    </div>
-    <div class="card-content">
-      <h2>PROP TRADING</h2>
-      Scale up to $5M
-      <br>
-      Fast Payouts at each level
-      <br>
-      Earn up to $562,400                     
-                   
-    </div>
     
-    <div class="card-footer">
-    Your account can grow to $5M funding power with no deadline to hit targets. Profits keep growing as we do!
-    </div>
-  </div>
+ <!-- <h7>&#10004; Accessible Entry:</h7>Challenges start at just $99.
+ <br>
+<h7> &#10004;   Streamlined Process:</h7>Simple 1-step challenges available.
+  <br>
+  <h7> &#10004;   Risk-Free Participation: </h7> Full refund promise after Level
+  <br>
+ <h7>  &#10004;  Skill Recognition: </h7>Earn your official TTP Certification. -->
   
-  <div class="card5">
-    <div class="card-count-container">
-      <div class="card-count">3</div>
-    </div>
-    <div class="card-content">
-      <h2>The Forex Trading</h2>
-      Fully Funded. 
-                            <br>
-                            Keep up to 80% of profits
-                            <br>
-                           Pursue a professional career
-    </div>
-    
-    <div class="card-footer">
-    No more risking your money! Trade with our funds and even become a professional fund manager if you want!
-    </div>
-  </div>
-</div>
-
-
-    
-    <div style="padding: 25px 25px 25px 25px;">
-    <center>
-    <a href="#" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Learn more!</a>
-    </div>
-    
   
-  <!-- <div class="card" style="margin-top: 10px; border-radius: 30px;"> -->
-    <div style="padding: 50px 25px 25px 50px;">
-    <img class="w-full max-w-28 max-h-16" src="https://cdn.thetradingpit.com/global/partners/atas-v2.svg" alt=""width="100" height="200">
-    <img class="w-full max-w-28 max-h-16" src="https://cdn.thetradingpit.com/global/partners/quantower.svg" alt="">
 
-    <img class="w-full max-w-28 max-h-16" src="https://cdn.thetradingpit.com/global/partners/fxflat-bank.svg" alt="">
-    <img class="w-full max-w-28 max-h-16" src="https://cdn.thetradingpit.com/global/partners/gbe-borkers-logo.svg" alt="">
-    
-    </center>
+                           
     </div>
-    </div>
-    </div>
-   
-
+    </div> </div> </div> </div>
     @include('.components.fooTer')

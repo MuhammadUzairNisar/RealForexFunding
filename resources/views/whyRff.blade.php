@@ -1,4 +1,4 @@
-@include('.components.navBar')
+@include('bootStrap')
 @include('.components.slideshow')
 
 <style>
@@ -205,7 +205,7 @@ body{
   border-radius:18px;
   box-shadow:0 0 0 3px rgba(255,0,0,0.5);
 }
-@media(max-width:1000px)
+@media(max-width:767px)
 {
   .timeline{
     width:100%;
@@ -397,7 +397,16 @@ body {
     font-size: 16px;
   }
 }
-
+.container-hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .container-hero {
+     /* Adjust the width to your preference */
+  }
+}
 </style>
 
 
@@ -407,10 +416,9 @@ body {
   
       
     
-    <div class="container">
+    <div class="container-hero">
   <h2 contenteditable>Why RFF?</h2>
   
-</div>
 
 
   
@@ -482,6 +490,10 @@ body {
   </div>
   
   <h2 contenteditable>Profit Sharing</h2>
+  </div>
+
+  <div class="row justify-content-center">
+   
   <div class="ag-format-container">
   <div class="ag-courses_box">
     <div class="ag-courses_item">
@@ -570,6 +582,8 @@ body {
 
   </div>
 </div>
+</div>
+
 
 
 @include('.components.fooTer')
