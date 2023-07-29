@@ -1,12 +1,12 @@
 @include('bootStrap')
-
+@include('.components.navBar')
 <style>
 h1 { color: #B67FFA; font-family: 'Raleway',
-sans-serif; font-size: 40px; font-weight: 800; line-height: 50px; margin: 0 15 0px;
+sans-serif; font-size: 40px; font-weight: 800; line-height: 50px; margin: 0 32 0px;
   text-transform: uppercase; }
 
  h2 { color: black; font-family: 'Raleway',sans-serif;
-  font-size: 40px; font-weight: 800; line-height: 15px; margin: 0  15px;  }
+  font-size: 40px; font-weight: 800; line-height: 15px; margin: 0  32px;  }
 
   h3 { color: black; font-family: 'Raleway',
 sans-serif; font-size: 30px; font-weight: 800; line-height: 50px; margin: 0 0 0px;
@@ -25,7 +25,7 @@ h6 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 20px; font-we
     
 
   p { color: black; font-family:
-   'Lucida Sans', Arial, sans-serif; font-size: 25px; line-height: 26px; text-indent: 0px; margin: 0 15 0px; }
+   'Lucida Sans', Arial, sans-serif; font-size: 25px; line-height: 26px; text-indent: 0px; margin: 0 32 0px; }
    p2 { color: #B67FFA; font-family: 'Raleway',sans-serif; font-size: 18px;
      font-weight: 700; line-height: 32px; margin: 0 0 24px; }
      p3 { color: #f8f8f8; font-family: 'Raleway',sans-serif; font-size: 
@@ -39,7 +39,7 @@ h6 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 20px; font-we
 .glow-on-hover {
     width: 180px;
     height: 50px;
-    margin: 15px;
+    margin: 32px;
     border: none;
     outline: none;
     color: #fff;
@@ -206,6 +206,7 @@ font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 12px;
 }
 
 .button {
