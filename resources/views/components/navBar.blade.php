@@ -89,9 +89,9 @@ h10 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 16px; font-w
     </div>
     <nav>
     <ul>
-      <li><a href=""><h10>home</h6></a></li>
+      <li><a href="{{url('/')}}"><h10>home</h6></a></li>
       <li><a href=""><h10>why rff</h6></a></li>
-      <li><a href=""><h10>affiliated programs</h6></a></li>
+      <li><a href="{{url('/affiliatedPrograms')}}"><h10>affiliated programs</h6></a></li>
       <li><a href=""><h10>trading rules</h6></a></li>
       <li><a href=""><h10>faqs</h6></a></li>
    </ul>
