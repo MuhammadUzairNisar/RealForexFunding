@@ -306,6 +306,59 @@ img {
     border-right: 5px solid purple;
 }
 
+@media (max-width: 768px) {
+            video {
+                width: 100%;
+                height: auto;
+            }
+
+            .card3 {
+                max-width: 100%;
+            }
+        }
+        @media (max-width: 576px) {
+            /* Adjust font sizes for better readability */
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 25px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            h4 {
+                font-size: 20px;
+            }
+
+            h5 {
+                font-size: 30px;
+            }
+
+            h6 {
+                font-size: 16px;
+            }
+
+            h7 {
+                font-size: 12px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            p2 {
+                font-size: 16px;
+            }
+
+            p3 {
+                font-size: 16px;
+            }
+        }
+
 
 
    
