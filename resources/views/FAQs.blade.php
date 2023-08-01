@@ -1,160 +1,175 @@
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
 
+/* Variables */
 :root {
-	--primary: #191919;
-	--secondary: #f26db6;
-	--ternary: #310273;
-	--background: #f1f1f1;
-	--gray: #e1eeff7f;
-	--white: #fff;
+  --bg: #fff;
+  --text: #7288a2;
+  --gray: #4d5974;
+  --lightgray: #e5e5e5;
+  --blue: #8a03d2;
+}
+
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
-	color: var(--font-color);
-	font-family: "Inter", sans-serif;
-	font-size: 1.2em;
-	line-height: 1.6;
-	background: var(--background);
-	overflow-x: hidden;
-	min-height: 100vh;
-	min-width: 100vw;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: var(--bg);
+  color: var(--gray);
+  display: flex;
+  min-height: 100vh;
 }
 
-.caption {
-	font-size: 10px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 13px;
-	letter-spacing: 0.04em;
-	text-align: left;
-	text-transform: uppercase;
-	color: var(--secondary);
-}
-.title {
-	font-size: 24px;
-	font-style: normal;
-	font-weight: bold;
-	line-height: 31px;
-	letter-spacing: 0em;
-	text-align: center;
-	margin-bottom: 8px;
-	color: var(--secondary);
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
 }
 
-.faq {
-	max-width: 800px;
-	margin: auto;
-}
-.box-content-colapse {
-	width: 70%;
-	height: auto;
-	position: relative;
+.accordion .accordion-item {
+  border-bottom: 1px solid var(--lightgray);
 }
 
-.intro-colapse {
-	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
 }
 
-.details-comp {
-	cursor: pointer;
-	width: calc(100% - 32px);
-	padding: 16px;
-	border-radius: 8px;
-	margin-bottom: 32px;
-	position: relative;
-	left: 0px;
-	background: white;
-	filter: drop-shadow(7px 9px 5px rgba(0, 0, 0, 0.04));
-	-webkit-filter: drop-shadow(7px 9px 5px rgba(0, 0, 0, 0.04));
-	-moz-filter: drop-shadow(7px 9px 5px rgba(0, 0, 0, 0.04));
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: var(--blue);
 }
 
-.details-comp > p {
-	padding: 0 16px;
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: var(--blue);
+  border: 1px solid var(--blue);
 }
 
-.summary-colapse {
-	list-style: none;
-	border-radius: 8px;
-	padding-left: 16px;
-	color: var(--ternary);
-	font-weight: bold;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-}
-.summary-colapse::-webkit-details-marker {
-	display: none;
+.accordion .accordion-title {
+  padding: 1em 1.5em 1em 0;
 }
 
-.details-comp[open] > .summary-colapse::after {
-	display: flex;
-	justify-content: space-between;
-	content: url("https://cdn-icons-png.flaticon.com/24/7153/7153564.png");
-	font-size: 16px;
-	align-items: center;
-	padding-right: 24px;
+.accordion .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
 }
 
-.details-comp > .summary-colapse::after {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	content: url("https://cdn-icons-png.flaticon.com/24/7153/7153566.png");
-	font-size: 16px;
-	padding-right: 24px;
+.accordion .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
 }
 
-.details-comp[open] p {
-	animation: details-show 350ms linear;
+.accordion .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
 }
 
-.details-comp:not([open]) p {
-	opacity: 0;
+.accordion button[aria-expanded='true'] {
+  color: var(--blue);
 }
 
-@keyframes details-show {
-	0% {
-		opacity: 0;
-		transform: translatey(-25px);
-	}
-	100% {
-		opacity: 1;
-		transform: translatey(0);
-	}
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
 }
 
 </style>
 
-<div class="box-content-colapse">
-	<div class="intro-colapse">
-		<h1>
-		Frequently Asked Question(FAQss)
-		</h1>
-		<h4 class="title">
-			Still have a question?
-		</h4>
-	</div>
-  @foreach ($data as $item)
 
-	<details class="details-comp">
-		<summary class="summary-colapse">
-    {{ $item->question }}
-		</summary>
-    <p>{{ $item->answer }}</p>
-	</details>
-  @endforeach
+<div class="container">
+
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+  @foreach ($data as $item)
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">{{ $item->question }}</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p> {{ $item->answer }}</p>
+      </div>
+    </div>
+	@endforeach
+  </div>
 </div>
+
+
+<script>
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script> 
+
+
+
+
+
