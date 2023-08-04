@@ -83,8 +83,8 @@ h10 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 16px; font-w
 <header>
   <div class="container2">
     <div class="logo-box">
-      <a href="">
-        <img src="https://cdn.thetradingpit.com/global/logo-dark-4.svg">
+      <a href="{{url('/')}}">
+        <img src="{{ asset('images/logo.jpg') }}" width="75" height="75">
       </a>
     </div>
     <nav>

@@ -132,9 +132,105 @@ body {
   margin: 2em 0;
 }
 
+body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .accordion .accordion-item {
+    border-bottom: 1px solid var(--lightgray);
+    margin-bottom: 1rem;
+  }
+
+  .accordion button {
+    padding: 1em 0.5em;
+    font-size: 1rem;
+  }
+
+  .accordion .accordion-title {
+    padding: 1em 1em 1em 0;
+  }
+
+  .accordion .icon {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .accordion .icon::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .accordion .icon::after {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .accordion .accordion-content {
+    max-height: 0;
+    transition: max-height 200ms linear;
+  }
+
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    max-height: 500px; /* Change this value as per your requirement */
+    transition: max-height 200ms linear;
+  }
+
+  .accordion-content p {
+    margin: 1em 0;
+  }
+
+  /* Responsive image */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    /* Add styles for screens with a minimum width of 768px (tablets and larger) */
+    .container {
+      padding: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    /* Add styles for screens with a minimum width of 992px (desktops and larger) */
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .accordion button {
+      font-size: 1.15rem;
+    }
+
+    .accordion .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+
+    .accordion .icon {
+      right: 0;
+      left: auto;
+    }
+
+    .accordion .icon::before {
+      left: 5px;
+      right: auto;
+    }
+
+    .accordion .icon::after {
+      left: 9px;
+      right: auto;
+    }
+  }
+
 </style>
 
-
+<img src="{{asset('images/FAQs-cuate.png')}}"  alt="Responsive image">
 <div class="container">
 
   <h2>Frequently Asked Questions</h2>
@@ -167,7 +263,8 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
-</script> 
+</script>
+
 
 
 

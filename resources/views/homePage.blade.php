@@ -306,66 +306,46 @@ img {
     border-right: 5px solid purple;
 }
 
-@media (max-width: 768px) {
-            video {
-                width: 100%;
-                height: auto;
-            }
 
-            .card3 {
-                max-width: 100%;
-            }
-        }
-        @media (max-width: 576px) {
-            /* Adjust font sizes for better readability */
-            h1 {
-                font-size: 30px;
-            }
+@media only screen and (max-width: 768px) {
+    /* Adjust font sizes for smaller screens */
+    h1 { font-size: 32px; line-height: 40px; }
+    h2 { font-size: 32px; line-height: 15px; }
+    h3 { font-size: 24px; line-height: 40px; }
+    h4 { font-size: 20px; line-height: 28px; }
+    h5 { font-size: 36px; line-height: 60px; }
+    h6 { font-size: 16px; line-height: 28px; }
+    h7 { font-size: 12px; line-height: 8px; }
+    p { font-size: 18px; line-height: 20px; }
+    p2 { font-size: 16px; line-height: 28px; }
+    p3 { font-size: 16px; line-height: 28px; }
+  }
+  @media only screen and (max-width: 600px) {
+    /* Adjust layout for smaller screens */
+    .video {
+      float: none;
+      display: block;
+      margin: 0 auto;
+    }
 
-            h2 {
-                font-size: 25px;
-            }
-
-            h3 {
-                font-size: 20px;
-            }
-
-            h4 {
-                font-size: 20px;
-            }
-
-            h5 {
-                font-size: 30px;
-            }
-
-            h6 {
-                font-size: 16px;
-            }
-
-            h7 {
-                font-size: 12px;
-            }
-
-            p {
-                font-size: 18px;
-            }
-
-            p2 {
-                font-size: 16px;
-            }
-
-            p3 {
-                font-size: 16px;
-            }
-        }
-
-
-
-   
+    /* Add responsiveness to the .card3 */
+    .card3 {
+      max-width: 100%;
+      margin: 0 12px;
+    }
+  }
+ #myImage {
+        height: 500px; /* Set the desired height here */
+        width: 600px;  /* Set the desired width here */
+    }
+    #myImage1 {
+        height: 444px; /* Set the desired height here */
+        width: 600px;  /* Set the desired width here */
+    }  
 </style>
 
 
-<div style="padding: 120px 25px 25px 25px;">
+<div style="padding: 0px 25px 25px 25px;">
 </div>
 <div class="row">
   <div class="col-md-6 ">
@@ -435,131 +415,371 @@ src="https://cdn.thetradingpit.com/pages/homepage/hero-side-video-en-us-hq.mp4">
 
 <div style="background-color:lightgray;">
 <center>
-<div style="padding: 80px 25px 25px 25px;">
-<div class="card" style="margin-top: 50px; border-radius: 20px;">
-  <div style="padding: 50px 25px 25px 25px;">
-  <div class="container">
-  <div class="lg:max-w-2xl lg:pl-16">
-  <div style="padding: 40px 25px 25px 40px;">
-   
-      <h2 class="card-title">Rise to the Challenge</h2>
-      <br>
-      <p2>THE POWER OF MULTI-ASSET TRADING</p2>
-      <div style="padding: 40px 25px 25px 40px;">
-  
-      
-  <div class="container-fluid">
-    <div class="container">
-      <div class="row">
-      <div class="col-sm-4">
-          <div class="card3">
-            <div class="title">
-              
-              <h2>LITE</h2>
-            </div>
-            <div class="price">
-              <h4><sup>$</sup>99</h4>
-            </div>
-            <button class="glow-on-hover" type="button">BUY NOW</button> 
-            <br>
-            <div class="option">
-    <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p1>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <p1 class="card-text">One-Time Payment Only</p1>
-    <br>
-    <b>Profit Target</b>
-    <br>
-    <p1 class="card-text">$1,000 (10%)</p1>
-    <br>
-    <b>Total Challenge Duration</b>
-    <br>
-    <p1 class="card-text">90 Days</p1>
-    <br>
-            </div>
-           
-          </div>
-        </div>
+<div style="padding: 2px 25px 25px 25px;">
 
-        <div class="col-sm-4">
-          <div class="card3">
-            <div class="title">
-              
-              <h2>STANDARD</h2>
-            </div>
-            <div class="price">
-              <h4><sup>$</sup>179</h4>
-              <button class="glow-on-hover" type="button">BUY NOW</button> 
-            <br>
-            </div>
-            <div class="option">
-    <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p1>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <p1 class="card-text">One-Time Payment Only</p1>
-    <br>
-    <b>Profit Target</b>
-    <br>
-    <p1 class="card-text">$2,000 (10%)</p1>
-    <br>
-    <b>Total Challenge Duration</b>
-    <br>
-    <p1 class="card-text">90 Days</p1>
-    <br>
-            </div>
-           
-          </div>
+
+<div class="card" style="margin-top: 50px; border-radius: 20px;">
+  <div class="container">
+    <div class="lg:max-w-2xl lg:pl-16">
+      <div style="padding: 40px 25px 25px 40px;">
+        <h2 class="card-title">Rise to the Challenge</h2>
+        <br>
+        <p2>THE POWER OF MULTI-ASSET TRADING</p2>
+      </div>
+
+      <div class="container-fluid">
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-sm-4">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 1</h2>
         </div>
-  
-  
-        
-        <div class="col-sm-4">
-          <div class="card3">
-            <div class="title">
-             
-              <h2>VIP</h2>
-            </div>
-            <div class="price">
-              <h4><sup>$</sup>999</h4>
-              <button class="glow-on-hover" type="button">BUY NOW</button> 
-            <br>
-            </div>
-            <div class="option">
-    <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $10,000</p1>
-    <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
-    <p1 class="card-text">One-Time Payment Only</p1>
-    <br>
-    <b>Profit Target</b>
-    <br>
-    <p1 class="card-text">$8,000 (8%)</p1>
-    <br>
-    <b>Total Challenge Duration</b>
-    <br>
-    <p1 class="card-text">90 Days</p1>
-    <br>
-            </div>
-            
-          </div>
+        <div class="price">
+          <h4><sup>$</sup>49</h4>
         </div>
-        
-  
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $5,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$500 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">60 Days</p1>
+          <br>
+        </div>
       </div>
     </div>
-    
 
-<div style="padding: 40px 25px 25px 25px;">
-    <center> <button class="glow-on-hover" type="button">Get Started</button> 
-    </center>
+    <!-- Card 2 -->
+    <div class="col-sm-4">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 2</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>69</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $7,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$700 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">75 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-sm-4">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 3</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>89</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $8,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$800 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">80 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-sm-4" style="margin-top: 40px;">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 4</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>119</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $12,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$1,200 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">100 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-sm-4" style="margin-top: 50px;">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 5</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>149</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $15,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$1,500 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">120 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
   </div>
+</div>
+
+      <div style="padding: 40px 25px 25px 25px;">
+        <center>
+          <button class="glow-on-hover" type="button">Get Started</button>
+        </center>
+      </div>
+    </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+</div>
+
  
   
   
   </section>
+
+  
+<div class="card" style="margin-top: 50px; border-radius: 20px;">
+  <div class="container">
+    <div class="lg:max-w-2xl lg:pl-16">
+      <div style="padding: 40px 25px 25px 40px;">
+        <h2 class="card-title">Rise to the Challenge</h2>
+        <br>
+        <p2>THE POWER OF MULTI-ASSET TRADING</p2>
+      </div>
+
+      <div class="container-fluid">
+  <div class="row">
+    <!-- Card 1 -->
+    <div class="col-sm-4">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 1</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>49</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $5,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$500 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">60 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-sm-4">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 2</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>69</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $7,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$700 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">75 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-sm-4">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 3</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>89</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $8,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$800 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">80 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-sm-4" style="margin-top: 40px;">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 4</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>119</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $12,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$1,200 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">100 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-sm-4" style="margin-top: 50px;">
+      <div class="card3" style="padding: 40px 25px 25px 40px;">
+        <div class="title">
+          <h2>CARD 5</h2>
+        </div>
+        <div class="price">
+          <h4><sup>$</sup>149</h4>
+        </div>
+        <button class="glow-on-hover" type="button">BUY NOW</button>
+        <br>
+        <div class="option">
+          <p1 class="card-text">CHALLENGE ACCOUNT BALANCE: $15,000</p1>
+          <hr class="border-t-2 border-gray-200 w-28 mx-auto my-2">
+          <p1 class="card-text">One-Time Payment Only</p1>
+          <br>
+          <b>Profit Target</b>
+          <br>
+          <p1 class="card-text">$1,500 (10%)</p1>
+          <br>
+          <b>Total Challenge Duration</b>
+          <br>
+          <p1 class="card-text">120 Days</p1>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div style="padding: 40px 25px 25px 25px;">
+        <center>
+          <button class="glow-on-hover" type="button">Get Started</button>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+  
+  
+  </section>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
   <div class="card" style="margin-top: 80px; border-radius: 20px;">
@@ -594,6 +814,12 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
     </div>
   </div>
   </div>
+
+
+
+
+
+  
   </div>
   <div style="padding: 50px 25px 25px 25px;">
   <div class="container-1">
@@ -605,7 +831,8 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
     <br>
     <button class="glow-on-hover" type="button">Get Started!</button>
     <br>
-    <img src="https://cdn.thetradingpit.com/pages/homepage/start-side-image-en-us.png" class="img-fluid" alt="Responsive image">
+    <img src="{{asset('images/model1.png')}}" class="img-fluid-steps" alt="Responsive image" id="myImage">
+
     </div>
     </div>
     <div class="col-md-6">
@@ -641,8 +868,8 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
 <div style="padding: 25px 25px 25px 25px;">
 </div>
 <div class="image-container">
-    <img src="https://cdn.thetradingpit.com/pages/homepage/how-broker-en-us-modified.png" alt="rounded-corner">
-    <img src="https://cdn.thetradingpit.com/pages/homepage/how-trader-en-us-modified.png" alt="rounded-corner">
+    <img src="{{asset('images/rffbottomSheet.jpg')}}">
+    <img src="{{asset('images/rffbottomSheet2.jpg')}}" alt="rounded-corner">
   </div>
   </div>
   </div>
@@ -675,7 +902,8 @@ src="https://cdn.thetradingpit.com/pages/homepage/trading-side-video.mp4">
   </div>
   <div class="col-md-6">
     <div>
-      <img alt="Web Studio" class="img-fluid" src="https://cdn.thetradingpit.com/pages/homepage/how-points-card-en-us.png">
+    <img src="{{asset('images/model00.png')}}" class="img-fluid-steps" alt="Responsive image" id="myImage1">
+
     </div>
   </div>
     </div>

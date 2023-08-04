@@ -344,7 +344,7 @@ with Rules</h1>
   
   <div class="col-md-6 ">
     <div>
-	<img src="https://cdn.thetradingpit.com/pages/platforms/atas-hero-side-img.png" class="img-fluid" alt="Responsive image">
+	<img src="{{asset('images/trading-rules.png')}}" class="img-fluid" alt="Responsive image">
 
       
     </div>
@@ -404,7 +404,7 @@ with Rules</h1>
     <div>
    
 
-<img src="https://cdn.thetradingpit.com/pages/platforms/bookmap-info-side-img.png"  alt="Responsive image">
+<img src="{{asset('images/trading-rule1.png')}}"  alt="Responsive image">
 
 <!--     -->
   </div>

@@ -366,7 +366,10 @@ img {
 /* Six cards css ends here */
 
 
-
+#myImage {
+        height: 500px; /* Set the desired height here */
+        width: 600px;  /* Set the desired width here */
+    }
    
 </style>
 
@@ -418,7 +421,7 @@ src="https://cdn.thetradingpit.com/pages/affiliates/affiliate-v3-hero-side-video
     <br>
     <button class="glow-on-hover" type="button">Join Now!</button>
     <br>
-    <img src="https://cdn.thetradingpit.com/pages/affiliates/overview-side-image.png" class="img-fluid" alt="Responsive image">
+    <img src="{{asset('images/model1.png')}}" class="img-fluid-steps" alt="Responsive image" id="myImage">
     </div>
     </div>
     <div class="col-md-6">
@@ -501,7 +504,7 @@ src="https://cdn.thetradingpit.com/pages/affiliates/affiliate-v3-hero-side-video
 <div class="custom-container">
     <!-- Card 1 -->
     <div class="package-card">
-      <img src="https://cdn.thetradingpit.com/pages/affiliates/dollar-infinite.png" alt="Package 1">
+      <img src="{{asset('images/infinity.png')}}" alt="Package 1">
       <h3>UNLIMITED INCOME</h3>
       <p>The more sales start, the more commission you earn.</p>
     </div>
@@ -515,28 +518,28 @@ src="https://cdn.thetradingpit.com/pages/affiliates/affiliate-v3-hero-side-video
     
     <!-- Card 3 -->
     <div class="package-card">
-      <img src="https://cdn.thetradingpit.com/pages/affiliates/multi-asset.png" alt="Package 3">
+      <img src="{{asset('images/bar-chart.png')}}" alt="Package 3">
       <h3>WIDE RANGE OF PRODUCTS</h3>
       <p>Choose between real Futures, Forex, Commodities, Indices, Crypto & Stocks CFDs that you want to promote.</p>
     </div>
     
     <!-- Card 4 -->
     <div class="package-card">
-      <img src="https://cdn.thetradingpit.com/pages/affiliates/headset.png" alt="Package 4">
+      <img src="{{asset('images/support.png')}}" alt="Package 4">
       <h3>SEAMLESS SUPPORT</h3>
       <p>We are here to support you every step of the way. We provide you with marketing materials and resources to help you succeed.</p>
     </div>
     
     <!-- Card 5 -->
     <div class="package-card">
-      <img src="https://cdn.thetradingpit.com/pages/affiliates/handshake.png" alt="Package 5">
+      <img src="{{asset('images/shield.png')}}" alt="Package 5">
       <h3>TRUSTWORTHY PARTNER</h3>
       <p>We have a strong reputation for providing high-quality products and excellent customer service. If you refer people to us, you can be confident they will receive a great experience.</p>
     </div>
     
     <!-- Card 6 -->
     <div class="package-card">
-      <img src="https://cdn.thetradingpit.com/pages/affiliates/clock-hours.png" alt="Package 6">
+      <img src="{{asset('images/working-time.png')}}" alt="Package 6">
       <h3>FLEXIBLE WORKING HOURS</h3>
       <p>You can work from anywhere, anytime, as an affiliate. This means you can work on your own schedule and from the comfort of your home.</p>
     </div>
