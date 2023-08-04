@@ -84,7 +84,7 @@ h10 { color: #301934; font-family: 'Raleway',sans-serif; font-size: 16px; font-w
   <div class="container2">
     <div class="logo-box">
       <a href="{{url('/')}}">
-        <img src="{{ asset('images/logo.jpg') }}" width="75" height="75">
+        <img src="{{ asset('images/Logo.jpg') }}" width="75" height="75">
       </a>
     </div>
     <nav>
